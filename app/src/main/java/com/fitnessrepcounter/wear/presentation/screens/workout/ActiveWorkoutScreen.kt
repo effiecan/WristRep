@@ -21,12 +21,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
+import androidx.annotation.StringRes
+import com.fitnessrepcounter.wear.R
 import com.fitnessrepcounter.wear.domain.model.RepDetectionState
 import com.fitnessrepcounter.wear.presentation.components.BadgeTone
 import com.fitnessrepcounter.wear.presentation.components.CorrectionControlButton
@@ -44,7 +47,7 @@ fun ActiveWorkoutScreen(
     onEndSet: () -> Unit,
 ) {
     val exercise = uiState.selectedExercise
-    val statusText = uiState.detectionState.toUserFacingStatus()
+    val statusText = stringResource(uiState.detectionState.toUserFacingStatusRes())
 
     WristRepScreenScaffold(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -58,7 +61,7 @@ fun ActiveWorkoutScreen(
         ) {
             Spacer(modifier = Modifier.height(8.dp))
             AdaptiveExerciseTitle(
-                text = exercise?.displayName ?: "Workout",
+                text = exercise?.let { stringResource(it.displayNameRes) } ?: stringResource(R.string.workout),
                 modifier = Modifier
                     .fillMaxWidth(0.76f)
                     .widthIn(max = 128.dp)
@@ -66,7 +69,7 @@ fun ActiveWorkoutScreen(
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
-                text = "Set ${uiState.currentSetNumber}",
+                text = stringResource(R.string.set_number, uiState.currentSetNumber),
                 style = MaterialTheme.typography.body2,
                 color = WatchTextSecondary,
                 fontWeight = FontWeight.SemiBold,
@@ -99,12 +102,12 @@ fun ActiveWorkoutScreen(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     CorrectionControlButton(
-                        label = "-1",
+                        label = stringResource(R.string.rep_adjust_minus_one),
                         onClick = onRemoveRep,
                         size = 40.dp,
                     )
                     PrimaryActionButton(
-                        text = "End Set",
+                        text = stringResource(R.string.end_set),
                         onClick = onEndSet,
                         modifier = Modifier
                             .weight(1f)
@@ -112,7 +115,7 @@ fun ActiveWorkoutScreen(
                         height = 34.dp,
                     )
                     CorrectionControlButton(
-                        label = "+1",
+                        label = stringResource(R.string.rep_adjust_plus_one),
                         onClick = onAddRep,
                         size = 40.dp,
                     )
@@ -163,13 +166,14 @@ private fun AdaptiveExerciseTitle(
     }
 }
 
-private fun RepDetectionState.toUserFacingStatus(): String {
+@StringRes
+private fun RepDetectionState.toUserFacingStatusRes(): Int {
     return when (this) {
-        RepDetectionState.IDLE -> "Ready"
+        RepDetectionState.IDLE -> R.string.status_ready
         RepDetectionState.MOVING_UP,
         RepDetectionState.MOVING_DOWN,
-        -> "Tracking"
-        RepDetectionState.REP_CONFIRMED -> "Rep detected"
-        RepDetectionState.PAUSED -> "Paused"
+        -> R.string.status_tracking
+        RepDetectionState.REP_CONFIRMED -> R.string.status_rep_detected
+        RepDetectionState.PAUSED -> R.string.status_paused
     }
 }

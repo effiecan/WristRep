@@ -1,5 +1,6 @@
 package com.fitnessrepcounter.wear.presentation.viewmodel
 
+import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.fitnessrepcounter.wear.domain.repository.EntitlementRepository
@@ -8,6 +9,7 @@ import com.fitnessrepcounter.wear.presentation.state.PaywallUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 
 class PaywallViewModel(
@@ -19,14 +21,32 @@ class PaywallViewModel(
 
     init {
         viewModelScope.launch {
-            entitlementRepository.observeEntitlement().collect { entitlement ->
-                _uiState.value = PaywallUiState(entitlementState = entitlement)
-            }
+            entitlementRepository.syncBillingState()
+        }
+
+        viewModelScope.launch {
+            entitlementRepository.observeEntitlement()
+                .combine(entitlementRepository.observeBillingAvailability()) { entitlement, billing ->
+                    PaywallUiState(
+                        entitlementState = entitlement,
+                        isBillingReady = billing.isBillingReady,
+                        isProductAvailable = billing.isProductAvailable,
+                        isPurchaseInProgress = billing.isPurchaseInProgress,
+                    )
+                }
+                .collect { state ->
+                    _uiState.value = state
+                }
         }
     }
 
-    suspend fun unlockPro() {
+    suspend fun unlockPro(activity: Activity) {
+        if (!_uiState.value.canUnlockPro) {
+            entitlementRepository.syncBillingState()
+            return
+        }
+
         hapticsManager.performPaywallTap()
-        entitlementRepository.refillFreeTrialsForDebug()
+        entitlementRepository.launchProPurchase(activity)
     }
 }

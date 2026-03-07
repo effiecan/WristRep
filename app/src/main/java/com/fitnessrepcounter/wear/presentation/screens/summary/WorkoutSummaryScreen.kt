@@ -10,7 +10,9 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.fitnessrepcounter.wear.R
 import com.fitnessrepcounter.wear.presentation.components.HistoryRowCard
 import com.fitnessrepcounter.wear.presentation.components.PrimaryActionButton
 import com.fitnessrepcounter.wear.presentation.components.ScreenTitle
@@ -31,12 +33,13 @@ fun WorkoutSummaryScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
     ) {
-        ScreenTitle(title = "Summary")
+        ScreenTitle(title = stringResource(R.string.summary))
         Spacer(modifier = Modifier.height(18.dp))
         SummaryCard(
-            title = "Workout total",
-            subtitle = uiState.selectedExercise?.displayName ?: "Workout",
-            value = "${uiState.totalReps} reps",
+            title = stringResource(R.string.workout_total),
+            subtitle = uiState.selectedExercise?.let { stringResource(it.displayNameRes) }
+                ?: stringResource(R.string.workout),
+            value = "${uiState.totalReps} ${stringResource(R.string.reps)}",
         )
         Spacer(modifier = Modifier.height(12.dp))
         Column(
@@ -48,21 +51,21 @@ fun WorkoutSummaryScreen(
         ) {
             uiState.completedSets.forEach { set ->
                 HistoryRowCard(
-                    title = "Set ${set.setNumber}",
-                    subtitle = "Manual edits ${set.manualAdjustmentCount}",
+                    title = stringResource(R.string.set_number, set.setNumber),
+                    subtitle = stringResource(R.string.manual_edits_count, set.manualAdjustmentCount),
                     value = "${set.repCount}",
                 )
             }
         }
         Spacer(modifier = Modifier.height(10.dp))
         PrimaryActionButton(
-            text = "Save",
+            text = stringResource(R.string.save),
             onClick = onSave,
             enabled = uiState.canSave,
         )
         Spacer(modifier = Modifier.height(8.dp))
         SecondaryActionButton(
-            text = "Discard",
+            text = stringResource(R.string.discard),
             onClick = onDiscard,
         )
     }

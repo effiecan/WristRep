@@ -1,12 +1,16 @@
 package com.fitnessrepcounter.wear.navigation
 
+import android.app.Activity
+import android.content.Context
+import android.content.ContextWrapper
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.ViewModelProvider
@@ -69,14 +73,22 @@ fun AppNavGraph(
         composable(AppRoute.Paywall.route) {
             val paywallViewModel: PaywallViewModel = viewModel(factory = viewModelFactory)
             val uiState by paywallViewModel.uiState.collectAsState()
+            val activity = LocalContext.current.findActivity()
             val coroutineScope = rememberCoroutineScope()
+
+            LaunchedEffect(uiState.entitlementState.isProUnlocked) {
+                if (uiState.entitlementState.isProUnlocked) {
+                    navController.popBackStack()
+                }
+            }
 
             PaywallScreen(
                 uiState = uiState,
                 onUnlockClick = {
-                    coroutineScope.launch {
-                        paywallViewModel.unlockPro()
-                        navController.popBackStack()
+                    if (activity != null) {
+                        coroutineScope.launch {
+                            paywallViewModel.unlockPro(activity)
+                        }
                     }
                 },
                 onBack = { navController.popBackStack() },
@@ -257,4 +269,15 @@ fun AppNavGraph(
             }
         }
     }
+}
+
+private fun Context.findActivity(): Activity? {
+    var currentContext = this
+    while (currentContext is ContextWrapper) {
+        if (currentContext is Activity) {
+            return currentContext
+        }
+        currentContext = currentContext.baseContext
+    }
+    return null
 }

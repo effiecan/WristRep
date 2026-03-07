@@ -1,5 +1,6 @@
 package com.fitnessrepcounter.wear.presentation.screens.paywall
 
+import android.content.Context
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsEnabled
@@ -7,7 +8,9 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.fitnessrepcounter.wear.R
 import com.fitnessrepcounter.wear.presentation.state.PaywallUiState
 import com.fitnessrepcounter.wear.ui.theme.FitnessRepCounterTheme
 import org.junit.Rule
@@ -19,27 +22,32 @@ class PaywallScreenTest {
     @get:Rule
     val composeTestRule = createComposeRule()
 
+    private val context: Context = ApplicationProvider.getApplicationContext()
+
     @Test
     fun paywallScreen_showsSimplifiedCopy_withoutBackButton() {
         composeTestRule.setContent {
             FitnessRepCounterTheme {
                 PaywallScreen(
-                    uiState = PaywallUiState(),
+                    uiState = PaywallUiState(
+                        isBillingReady = true,
+                        isProductAvailable = true,
+                    ),
                     onUnlockClick = {},
                     onBack = {},
                 )
             }
         }
 
-        composeTestRule.onNodeWithText("Unlock Pro").assertIsDisplayed()
-        composeTestRule.onNodeWithText("Pay once").assertIsDisplayed()
-        composeTestRule.onNodeWithText("Unlimited workouts").assertIsDisplayed()
-        composeTestRule.onNodeWithText("Keep history").assertIsDisplayed()
-        composeTestRule.onNodeWithText("No trial limits").assertIsDisplayed()
+        composeTestRule.onNodeWithText(context.getString(R.string.unlock_pro)).assertIsDisplayed()
+        composeTestRule.onNodeWithText(context.getString(R.string.pay_once)).assertIsDisplayed()
+        composeTestRule.onNodeWithText(context.getString(R.string.unlimited_workouts)).assertIsDisplayed()
+        composeTestRule.onNodeWithText(context.getString(R.string.keep_history)).assertIsDisplayed()
+        composeTestRule.onNodeWithText(context.getString(R.string.no_trial_limits)).assertIsDisplayed()
         composeTestRule.onNodeWithTag("paywall_unlock_button").assertIsDisplayed().assertIsEnabled()
         composeTestRule.onNodeWithTag("paywall_reassurance").assertIsDisplayed()
-        composeTestRule.onNodeWithText("No subscription • $9.99").assertIsDisplayed()
+        composeTestRule.onNodeWithText(context.getString(R.string.no_subscription_price)).assertIsDisplayed()
         composeTestRule.onAllNodesWithText("Train without limits on this watch.").assertCountEquals(0)
-        composeTestRule.onAllNodesWithText("Back").assertCountEquals(0)
+        composeTestRule.onAllNodesWithText(context.getString(R.string.back)).assertCountEquals(0)
     }
 }

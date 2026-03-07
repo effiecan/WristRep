@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.2" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.fitnessrepcounter.wear.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="color[ic_launcher_background(U)],mipmap[ic_launcher(U),ic_launcher_round(U),ic_launcher_foreground(U)],string[app_name(U),pro_unlocked(U),free_workouts_left(U),trial_used(U),start_workout(U),history(U),exercises(U),back(U),go(U),get_ready(U),starting_now(U),workout(U),set_number(U),end_set(U),rep_adjust_minus_one(U),rep_adjust_plus_one(U),status_ready(U),status_tracking(U),status_rep_detected(U),status_paused(U),set_complete(U),reps_logged(U),rest(U),finish_workout(U),seconds_left(U),skip(U),summary(U),workout_total(U),reps(U),manual_edits_count(U),save(U),discard(U),no_workouts_yet(U),completed_sessions_will_appear_here(U),unlock_pro(U),pay_once(U),unlimited_workouts(U),keep_history(U),no_trial_limits(U),no_subscription_price(U),label_optimized(U),label_best_tracking_quality(U),label_experimental(U),label_manual_correction_may_help(U),label_soon(U),label_tuning_in_progress(U),exercise_biceps_curl(U),exercise_hammer_curl(U),exercise_lateral_raise(U),exercise_front_raise(U),exercise_shoulder_press(U),exercise_triceps_extension(U),exercise_dumbbell_row(U),exercise_dumbbell_chest_press(U)];1^0^3,2^0^3;;;"/>
+    </map>
+
+</incidents>

@@ -1,35 +1,38 @@
 package com.fitnessrepcounter.wear.domain.model
 
+import androidx.annotation.StringRes
+import com.fitnessrepcounter.wear.R
+
 enum class ExerciseSupportLevel(
-    val statusLabel: String,
-    val supportingLabel: String,
+    @StringRes val statusLabelRes: Int,
+    @StringRes val supportingLabelRes: Int,
 ) {
     OPTIMIZED(
-        statusLabel = "Optimized",
-        supportingLabel = "Best tracking quality",
+        statusLabelRes = R.string.label_optimized,
+        supportingLabelRes = R.string.label_best_tracking_quality,
     ),
     EXPERIMENTAL(
-        statusLabel = "Experimental",
-        supportingLabel = "Manual correction may help",
+        statusLabelRes = R.string.label_experimental,
+        supportingLabelRes = R.string.label_manual_correction_may_help,
     ),
     INTERNAL(
-        statusLabel = "Soon",
-        supportingLabel = "Tuning in progress",
+        statusLabelRes = R.string.label_soon,
+        supportingLabelRes = R.string.label_tuning_in_progress,
     ),
 }
 
 enum class Exercise(
-    val displayName: String,
+    @StringRes val displayNameRes: Int,
     val supportLevel: ExerciseSupportLevel,
 ) {
-    BICEPS_CURL("Biceps Curl", ExerciseSupportLevel.OPTIMIZED),
-    HAMMER_CURL("Hammer Curl", ExerciseSupportLevel.OPTIMIZED),
-    LATERAL_RAISE("Lateral Raise", ExerciseSupportLevel.OPTIMIZED),
-    FRONT_RAISE("Front Raise", ExerciseSupportLevel.OPTIMIZED),
-    SHOULDER_PRESS("Shoulder Press", ExerciseSupportLevel.EXPERIMENTAL),
-    TRICEPS_EXTENSION("Triceps Extension", ExerciseSupportLevel.EXPERIMENTAL),
-    DUMBBELL_ROW("Dumbbell Row", ExerciseSupportLevel.INTERNAL),
-    DUMBBELL_CHEST_PRESS("Dumbbell Chest Press", ExerciseSupportLevel.INTERNAL),
+    BICEPS_CURL(R.string.exercise_biceps_curl, ExerciseSupportLevel.OPTIMIZED),
+    HAMMER_CURL(R.string.exercise_hammer_curl, ExerciseSupportLevel.OPTIMIZED),
+    LATERAL_RAISE(R.string.exercise_lateral_raise, ExerciseSupportLevel.OPTIMIZED),
+    FRONT_RAISE(R.string.exercise_front_raise, ExerciseSupportLevel.OPTIMIZED),
+    SHOULDER_PRESS(R.string.exercise_shoulder_press, ExerciseSupportLevel.EXPERIMENTAL),
+    TRICEPS_EXTENSION(R.string.exercise_triceps_extension, ExerciseSupportLevel.EXPERIMENTAL),
+    DUMBBELL_ROW(R.string.exercise_dumbbell_row, ExerciseSupportLevel.INTERNAL),
+    DUMBBELL_CHEST_PRESS(R.string.exercise_dumbbell_chest_press, ExerciseSupportLevel.INTERNAL),
 }
 
 val Exercise.isSelectable: Boolean
@@ -44,8 +47,8 @@ val Exercise.isOptimized: Boolean
 val Exercise.isExperimental: Boolean
     get() = supportLevel == ExerciseSupportLevel.EXPERIMENTAL
 
-val Exercise.statusLabel: String
-    get() = supportLevel.statusLabel
+val Exercise.statusLabelRes: Int
+    get() = supportLevel.statusLabelRes
 
-val Exercise.supportingLabel: String
-    get() = supportLevel.supportingLabel
+val Exercise.supportingLabelRes: Int
+    get() = supportLevel.supportingLabelRes

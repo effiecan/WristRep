@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">WristRep</string>
+
+    <string name="pro_unlocked">Το Pro ξεκλειδώθηκε</string>
+    <string name="free_workouts_left">Απομένουν δωρεάν: %1$d</string>
+    <string name="trial_used">Η δοκιμή χρησιμοποιήθηκε</string>
+    <string name="start_workout">Έναρξη προπόνησης</string>
+    <string name="history">Ιστορικό</string>
+    <string name="exercises">Ασκήσεις</string>
+    <string name="back">Πίσω</string>
+    <string name="go">Έναρξη</string>
+    <string name="get_ready">Ετοιμάσου</string>
+    <string name="starting_now">Ξεκινά τώρα</string>
+    <string name="workout">Προπόνηση</string>
+    <string name="set_number">Σετ %1$d</string>
+    <string name="end_set">Τέλος σετ</string>
+    <string name="rep_adjust_minus_one">-1</string>
+    <string name="rep_adjust_plus_one">+1</string>
+    <string name="status_ready">Έτοιμο</string>
+    <string name="status_tracking">Παρακολούθηση</string>
+    <string name="status_rep_detected">Ανιχνεύτηκε επανάληψη</string>
+    <string name="status_paused">Σε παύση</string>
+    <string name="set_complete">Το σετ ολοκληρώθηκε</string>
+    <string name="reps_logged">Οι επαναλήψεις αποθηκεύτηκαν</string>
+    <string name="rest">Ξεκούραση</string>
+    <string name="finish_workout">Τερματισμός προπόνησης</string>
+    <string name="seconds_left">Δευτερόλεπτα που απομένουν</string>
+    <string name="skip">Παράλειψη</string>
+    <string name="summary">Σύνοψη</string>
+    <string name="workout_total">Σύνολο προπόνησης</string>
+    <string name="reps">επαν.</string>
+    <string name="manual_edits_count">Χειροκίνητες διορθώσεις %1$d</string>
+    <string name="save">Αποθήκευση</string>
+    <string name="discard">Απόρριψη</string>
+    <string name="no_workouts_yet">Δεν υπάρχουν προπονήσεις ακόμη</string>
+    <string name="completed_sessions_will_appear_here">Οι ολοκληρωμένες συνεδρίες θα εμφανίζονται εδώ.</string>
+    <string name="unlock_pro">Ξεκλείδωμα Pro</string>
+    <string name="pay_once">Πλήρωσε μία φορά</string>
+    <string name="unlimited_workouts">Απεριόριστες προπονήσεις</string>
+    <string name="keep_history">Διατήρησε το ιστορικό</string>
+    <string name="no_trial_limits">Χωρίς όρια δοκιμής</string>
+    <string name="no_subscription_price">Χωρίς συνδρομή • $9.99</string>
+
+    <string name="label_optimized">Βελτιστοποιημένο</string>
+    <string name="label_best_tracking_quality">Καλύτερη ποιότητα παρακολούθησης</string>
+    <string name="label_experimental">Πειραματικό</string>
+    <string name="label_manual_correction_may_help">Η χειροκίνητη διόρθωση μπορεί να βοηθήσει</string>
+    <string name="label_soon">Σύντομα</string>
+    <string name="label_tuning_in_progress">Γίνεται ρύθμιση</string>
+
+    <string name="exercise_biceps_curl">Κάμψεις δικεφάλων</string>
+    <string name="exercise_hammer_curl">Hammer curl</string>
+    <string name="exercise_lateral_raise">Πλάγιες άρσεις</string>
+    <string name="exercise_front_raise">Μπροστινές άρσεις</string>
+    <string name="exercise_shoulder_press">Πιέσεις ώμων</string>
+    <string name="exercise_triceps_extension">Εκτάσεις τρικεφάλων</string>
+    <string name="exercise_dumbbell_row">Κωπηλατική με αλτήρα</string>
+    <string name="exercise_dumbbell_chest_press">Πιέσεις στήθους με αλτήρες</string>
+</resources>

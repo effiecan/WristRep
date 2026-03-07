@@ -1,15 +1,18 @@
 package com.fitnessrepcounter.wear.presentation.viewmodel
 
+import android.app.Activity
 import com.fitnessrepcounter.wear.MainDispatcherRule
+import com.fitnessrepcounter.wear.domain.model.BillingAvailabilityState
+import com.fitnessrepcounter.wear.domain.model.BillingPurchaseLaunchResult
 import com.fitnessrepcounter.wear.domain.model.EntitlementState
 import com.fitnessrepcounter.wear.domain.model.Exercise
 import com.fitnessrepcounter.wear.domain.repository.EntitlementRepository
 import com.fitnessrepcounter.wear.platform.HapticsManager
 import com.google.common.truth.Truth.assertThat
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
 import org.junit.Rule
@@ -21,13 +24,12 @@ class PaywallViewModelTest {
     val mainDispatcherRule = MainDispatcherRule()
 
     @Test
-    fun unlockPro_refillsFreeTrialsForDebug() = runTest {
+    fun init_syncsBilling_andEnablesUnlockWhenOfferIsReady() = runTest {
         val entitlementRepository = FakePaywallEntitlementRepository(
-            EntitlementState(
-                completedFreeWorkoutsUsed = 3,
-                activeTrialSessionId = "trial-session",
-                activeTrialReservedAtEpochMs = 123L,
-                activeTrialConsumed = true,
+            initialState = EntitlementState(),
+            initialBillingState = BillingAvailabilityState(
+                isBillingReady = true,
+                isProductAvailable = true,
             ),
         )
         val viewModel = PaywallViewModel(
@@ -35,24 +37,54 @@ class PaywallViewModelTest {
             hapticsManager = HapticsManager(),
         )
 
-        viewModel.unlockPro()
         advanceUntilIdle()
 
-        assertThat(entitlementRepository.refillCallCount).isEqualTo(1)
-        assertThat(entitlementRepository.unlockStubCallCount).isEqualTo(0)
-        assertThat(entitlementRepository.state.value.remainingFreeWorkouts).isEqualTo(3)
-        assertThat(entitlementRepository.state.value.isProUnlocked).isFalse()
+        assertThat(entitlementRepository.syncCallCount).isEqualTo(1)
+        assertThat(viewModel.uiState.value.canUnlockPro).isTrue()
+    }
+
+    @Test
+    fun init_keepsUnlockDisabledWhenProductIsUnavailable() = runTest {
+        val entitlementRepository = FakePaywallEntitlementRepository(
+            initialState = EntitlementState(),
+            initialBillingState = BillingAvailabilityState(
+                isBillingReady = true,
+                isProductAvailable = false,
+            ),
+        )
+        val viewModel = PaywallViewModel(
+            entitlementRepository = entitlementRepository,
+            hapticsManager = HapticsManager(),
+        )
+
+        advanceUntilIdle()
+
+        assertThat(viewModel.uiState.value.canUnlockPro).isFalse()
+        assertThat(viewModel.uiState.value.isBillingReady).isTrue()
     }
 }
 
 private class FakePaywallEntitlementRepository(
     initialState: EntitlementState,
+    initialBillingState: BillingAvailabilityState,
 ) : EntitlementRepository {
     val state = MutableStateFlow(initialState)
-    var refillCallCount: Int = 0
-    var unlockStubCallCount: Int = 0
+    val billingState = MutableStateFlow(initialBillingState)
+    var syncCallCount: Int = 0
+    var launchPurchaseCallCount: Int = 0
 
     override fun observeEntitlement(): Flow<EntitlementState> = state.asStateFlow()
+
+    override fun observeBillingAvailability(): Flow<BillingAvailabilityState> = billingState.asStateFlow()
+
+    override suspend fun syncBillingState() {
+        syncCallCount += 1
+    }
+
+    override suspend fun launchProPurchase(activity: Activity): BillingPurchaseLaunchResult {
+        launchPurchaseCallCount += 1
+        return BillingPurchaseLaunchResult.Launched
+    }
 
     override suspend fun reserveActiveTrialSessionIfNeeded(exercise: Exercise): Boolean = true
 
@@ -62,22 +94,7 @@ private class FakePaywallEntitlementRepository(
 
     override suspend fun appendActiveTrialUsage(durationMs: Long) = Unit
 
-    override suspend fun refillFreeTrialsForDebug() {
-        refillCallCount += 1
-        state.value = state.value.copy(
-            completedFreeWorkoutsUsed = 0,
-            isProUnlocked = false,
-            activeTrialSessionId = null,
-            activeTrialReservedAtEpochMs = null,
-            activeTrialConsumed = false,
-            activeTrialExerciseName = null,
-            activeTrialAccumulatedActiveMs = 0L,
-        )
-    }
-
-    override suspend fun unlockProStub() {
-        unlockStubCallCount += 1
-    }
+    override suspend fun refillFreeTrialsForDebug() = Unit
 
     override suspend fun reconcileCompletedWorkoutUsage(completedWorkoutCount: Int) = Unit
 }

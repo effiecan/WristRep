@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">WristRep</string>
+
+    <string name="pro_unlocked">Pro разблокирован</string>
+    <string name="free_workouts_left">Осталось бесплатно: %1$d</string>
+    <string name="trial_used">Пробный доступ использован</string>
+    <string name="start_workout">Начать тренировку</string>
+    <string name="history">История</string>
+    <string name="exercises">Упражнения</string>
+    <string name="back">Назад</string>
+    <string name="go">Старт</string>
+    <string name="get_ready">Приготовьтесь</string>
+    <string name="starting_now">Начинаем</string>
+    <string name="workout">Тренировка</string>
+    <string name="set_number">Подход %1$d</string>
+    <string name="end_set">Завершить подход</string>
+    <string name="rep_adjust_minus_one">-1</string>
+    <string name="rep_adjust_plus_one">+1</string>
+    <string name="status_ready">Готово</string>
+    <string name="status_tracking">Отслеживание</string>
+    <string name="status_rep_detected">Повторение засчитано</string>
+    <string name="status_paused">Пауза</string>
+    <string name="set_complete">Подход завершён</string>
+    <string name="reps_logged">Повторения сохранены</string>
+    <string name="rest">Отдых</string>
+    <string name="finish_workout">Завершить тренировку</string>
+    <string name="seconds_left">Осталось секунд</string>
+    <string name="skip">Пропустить</string>
+    <string name="summary">Итог</string>
+    <string name="workout_total">Всего за тренировку</string>
+    <string name="reps">повт.</string>
+    <string name="manual_edits_count">Ручные правки: %1$d</string>
+    <string name="save">Сохранить</string>
+    <string name="discard">Не сохранять</string>
+    <string name="no_workouts_yet">Тренировок пока нет</string>
+    <string name="completed_sessions_will_appear_here">Здесь появятся завершённые тренировки.</string>
+    <string name="unlock_pro">Разблокировать Pro</string>
+    <string name="pay_once">Разовая оплата</string>
+    <string name="unlimited_workouts">Безлимитные тренировки</string>
+    <string name="keep_history">Сохраняйте историю</string>
+    <string name="no_trial_limits">Без лимитов пробного доступа</string>
+    <string name="no_subscription_price">Без подписки • $9.99</string>
+
+    <string name="label_optimized">Оптимизировано</string>
+    <string name="label_best_tracking_quality">Лучшее качество отслеживания</string>
+    <string name="label_experimental">Экспериментально</string>
+    <string name="label_manual_correction_may_help">Может помочь ручная коррекция</string>
+    <string name="label_soon">Скоро</string>
+    <string name="label_tuning_in_progress">Идёт настройка</string>
+
+    <string name="exercise_biceps_curl">Сгибание на бицепс</string>
+    <string name="exercise_hammer_curl">Молотковый подъём</string>
+    <string name="exercise_lateral_raise">Подъём в стороны</string>
+    <string name="exercise_front_raise">Подъём перед собой</string>
+    <string name="exercise_shoulder_press">Жим на плечи</string>
+    <string name="exercise_triceps_extension">Разгибание на трицепс</string>
+    <string name="exercise_dumbbell_row">Тяга гантели</string>
+    <string name="exercise_dumbbell_chest_press">Жим гантелей лёжа</string>
+</resources>

@@ -1,6 +1,9 @@
 package com.fitnessrepcounter.wear.presentation.viewmodel
 
+import android.app.Activity
 import com.fitnessrepcounter.wear.MainDispatcherRule
+import com.fitnessrepcounter.wear.domain.model.BillingAvailabilityState
+import com.fitnessrepcounter.wear.domain.model.BillingPurchaseLaunchResult
 import com.fitnessrepcounter.wear.domain.model.EntitlementState
 import com.fitnessrepcounter.wear.domain.model.WorkoutSession
 import com.fitnessrepcounter.wear.domain.repository.EntitlementRepository
@@ -69,8 +72,17 @@ private class HomeFakeEntitlementRepository(
     initialState: EntitlementState,
 ) : EntitlementRepository {
     private val state = MutableStateFlow(initialState)
+    private val billingState = MutableStateFlow(BillingAvailabilityState())
 
     override fun observeEntitlement(): Flow<EntitlementState> = state.asStateFlow()
+
+    override fun observeBillingAvailability(): Flow<BillingAvailabilityState> = billingState.asStateFlow()
+
+    override suspend fun syncBillingState() = Unit
+
+    override suspend fun launchProPurchase(activity: Activity): BillingPurchaseLaunchResult {
+        return BillingPurchaseLaunchResult.ProductUnavailable
+    }
 
     override suspend fun reserveActiveTrialSessionIfNeeded(exercise: com.fitnessrepcounter.wear.domain.model.Exercise): Boolean = true
 
@@ -81,8 +93,6 @@ private class HomeFakeEntitlementRepository(
     override suspend fun appendActiveTrialUsage(durationMs: Long) = Unit
 
     override suspend fun refillFreeTrialsForDebug() = Unit
-
-    override suspend fun unlockProStub() = Unit
 
     override suspend fun reconcileCompletedWorkoutUsage(completedWorkoutCount: Int) = Unit
 }

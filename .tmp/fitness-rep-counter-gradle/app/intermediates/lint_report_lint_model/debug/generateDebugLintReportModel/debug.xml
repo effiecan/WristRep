@@ -1,0 +1,32 @@
+<variant
+    name="debug"
+    package="com.fitnessrepcounter.wear"
+    minSdkVersion="30"
+    targetSdkVersion="35"
+    debuggable="true"
+    mergedManifest="C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\intermediates\merged_manifest\debug\processDebugMainManifest\AndroidManifest.xml"
+    manifestMergeReport="C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\outputs\logs\manifest-merger-debug-report.txt"
+    proguardFiles="C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\intermediates\default_proguard_files\global\proguard-android.txt-8.5.2"
+    partialResultsDir="C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\intermediates\lint_partial_results\debug\lintAnalyzeDebug\out">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifests="src\main\AndroidManifest.xml"
+        javaDirectories="src\main\java;src\debug\java;src\main\kotlin;src\debug\kotlin"
+        resDirectories="src\main\res;src\debug\res"
+        assetsDirectories="src\main\assets;src\debug\assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <artifact
+      classOutputs="C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\intermediates\javac\debug\compileDebugJavaWithJavac\classes;C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\tmp\kotlin-classes\debug;C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\generated\ksp\debug\resources;C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar"
+      type="MAIN"
+      applicationId="com.fitnessrepcounter.wear"
+      generatedSourceFolders="C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\generated\ksp\debug\java;C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\generated\ksp\debug\kotlin;C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\generated\ap_generated_sources\debug\out"
+      generatedResourceFolders="C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\generated\res\resValues\debug"
+      desugaredMethodsFiles="C:\Users\efe_s\.gradle\caches\transforms-4\c869c59d066147b0fa673a6c1a1f9a10\transformed\D8BackportedDesugaredMethods.txt">
+  </artifact>
+</variant>

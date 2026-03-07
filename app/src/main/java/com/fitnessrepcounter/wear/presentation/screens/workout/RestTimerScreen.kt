@@ -7,7 +7,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.fitnessrepcounter.wear.R
 import com.fitnessrepcounter.wear.presentation.components.HeroMetric
 import com.fitnessrepcounter.wear.presentation.components.ScreenTitle
 import com.fitnessrepcounter.wear.presentation.components.SecondaryActionButton
@@ -23,15 +25,15 @@ fun RestTimerScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
     ) {
-        ScreenTitle(title = "Rest")
+        ScreenTitle(title = stringResource(R.string.rest))
         Spacer(modifier = Modifier.weight(1f))
         HeroMetric(
             value = uiState.restSecondsRemaining.toString(),
-            label = "Seconds left",
+            label = stringResource(R.string.seconds_left),
         )
         Spacer(modifier = Modifier.weight(1f))
         SecondaryActionButton(
-            text = "Skip",
+            text = stringResource(R.string.skip),
             onClick = onSkip,
             modifier = Modifier.fillMaxWidth(0.54f),
             height = 34.dp,

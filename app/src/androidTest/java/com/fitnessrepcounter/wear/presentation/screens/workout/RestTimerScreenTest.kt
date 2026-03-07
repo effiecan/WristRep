@@ -1,10 +1,13 @@
 package com.fitnessrepcounter.wear.presentation.screens.workout
 
+import android.content.Context
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsEnabled
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.fitnessrepcounter.wear.R
 import com.fitnessrepcounter.wear.presentation.state.WorkoutUiState
 import com.fitnessrepcounter.wear.ui.theme.FitnessRepCounterTheme
 import org.junit.Rule
@@ -15,6 +18,8 @@ import org.junit.runner.RunWith
 class RestTimerScreenTest {
     @get:Rule
     val composeTestRule = createComposeRule()
+
+    private val context: Context = ApplicationProvider.getApplicationContext()
 
     @Test
     fun restTimerScreen_showsCompactSkipButton() {
@@ -27,6 +32,6 @@ class RestTimerScreenTest {
             }
         }
 
-        composeTestRule.onNodeWithText("Skip").assertIsDisplayed().assertIsEnabled()
+        composeTestRule.onNodeWithText(context.getString(R.string.skip)).assertIsDisplayed().assertIsEnabled()
     }
 }

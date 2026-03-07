@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.2" type="partial_results">
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="string[free_workouts_left(R),exercise_triceps_extension(R),exercise_biceps_curl(R),exercise_shoulder_press(R),label_optimized(R),label_experimental(R),label_soon(R),exercise_dumbbell_row(R),exercise_dumbbell_chest_press(R),unlock_pro(R),pay_once(R),unlimited_workouts(R),keep_history(R),no_trial_limits(R),no_subscription_price(R),back(R),set_number(R),rep_adjust_minus_one(R),rep_adjust_plus_one(R),skip(R)];;;;"/>
+    </map>
+
+</incidents>

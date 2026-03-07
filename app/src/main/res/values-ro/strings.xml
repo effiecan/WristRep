@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">WristRep</string>
+
+    <string name="pro_unlocked">Pro deblocat</string>
+    <string name="free_workouts_left">Au rămas gratuit: %1$d</string>
+    <string name="trial_used">Perioada de probă a fost folosită</string>
+    <string name="start_workout">Începe antrenamentul</string>
+    <string name="history">Istoric</string>
+    <string name="exercises">Exerciții</string>
+    <string name="back">Înapoi</string>
+    <string name="go">Start</string>
+    <string name="get_ready">Pregătește-te</string>
+    <string name="starting_now">Începe acum</string>
+    <string name="workout">Antrenament</string>
+    <string name="set_number">Setul %1$d</string>
+    <string name="end_set">Termină setul</string>
+    <string name="rep_adjust_minus_one">-1</string>
+    <string name="rep_adjust_plus_one">+1</string>
+    <string name="status_ready">Pregătit</string>
+    <string name="status_tracking">Se urmărește</string>
+    <string name="status_rep_detected">Repetare detectată</string>
+    <string name="status_paused">În pauză</string>
+    <string name="set_complete">Set finalizat</string>
+    <string name="reps_logged">Repetări salvate</string>
+    <string name="rest">Odihnă</string>
+    <string name="finish_workout">Termină antrenamentul</string>
+    <string name="seconds_left">Secunde rămase</string>
+    <string name="skip">Sari</string>
+    <string name="summary">Rezumat</string>
+    <string name="workout_total">Total antrenament</string>
+    <string name="reps">rep.</string>
+    <string name="manual_edits_count">Editări manuale %1$d</string>
+    <string name="save">Salvează</string>
+    <string name="discard">Renunță</string>
+    <string name="no_workouts_yet">Încă nu există antrenamente</string>
+    <string name="completed_sessions_will_appear_here">Sesiunile finalizate vor apărea aici.</string>
+    <string name="unlock_pro">Deblochează Pro</string>
+    <string name="pay_once">Plătești o singură dată</string>
+    <string name="unlimited_workouts">Antrenamente nelimitate</string>
+    <string name="keep_history">Păstrează istoricul</string>
+    <string name="no_trial_limits">Fără limite de probă</string>
+    <string name="no_subscription_price">Fără abonament • $9.99</string>
+
+    <string name="label_optimized">Optimizat</string>
+    <string name="label_best_tracking_quality">Cea mai bună calitate de urmărire</string>
+    <string name="label_experimental">Experimental</string>
+    <string name="label_manual_correction_may_help">Corecția manuală poate ajuta</string>
+    <string name="label_soon">În curând</string>
+    <string name="label_tuning_in_progress">Se ajustează</string>
+
+    <string name="exercise_biceps_curl">Flexii pentru bicepși</string>
+    <string name="exercise_hammer_curl">Flexii ciocan</string>
+    <string name="exercise_lateral_raise">Ridicări laterale</string>
+    <string name="exercise_front_raise">Ridicări frontale</string>
+    <string name="exercise_shoulder_press">Împins de umeri</string>
+    <string name="exercise_triceps_extension">Extensii pentru tricepși</string>
+    <string name="exercise_dumbbell_row">Ramat cu gantera</string>
+    <string name="exercise_dumbbell_chest_press">Împins la piept cu gantere</string>
+</resources>

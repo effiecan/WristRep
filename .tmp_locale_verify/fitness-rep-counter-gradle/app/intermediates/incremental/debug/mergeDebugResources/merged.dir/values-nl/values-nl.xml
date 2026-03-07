@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WristRep</string>
+    <string name="back">Terug</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"Beantwoorden"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Video"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"Weigeren"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"Ophangen"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"Inkomend gesprek"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Actief gesprek"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"Een inkomend gesprek screenen"</string>
+    <string msgid="406453423630273620" name="close_drawer">"Navigatiemenu sluiten"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Blad sluiten"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Aanzetten</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s werkt niet, tenzij je Google Play-services aanzet.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play-services aanzetten</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Installeren</string>
+    <string name="common_google_play_services_install_text">%1$s kan niet worden uitgevoerd zonder Google Play-services, die je nog niet op je apparaat hebt.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play-services ophalen</string>
+    <string name="common_google_play_services_notification_channel_name">Beschikbaarheid van Google Play-services</string>
+    <string name="common_google_play_services_notification_ticker">Fout met Google Play-services</string>
+    <string name="common_google_play_services_unknown_issue">%1$s ondervindt problemen met Google Play-services. Probeer het opnieuw.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s kan niet worden uitgevoerd zonder Google Play-services, die niet worden ondersteund op je apparaat.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Updaten</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s kan niet worden uitgevoerd, tenzij je Google Play-services updatet.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Google Play-services updaten</string>
+    <string name="common_google_play_services_updating_text">%1$s kan niet worden uitgevoerd zonder Google Play-services, die momenteel worden geüpdatet.</string>
+    <string name="common_google_play_services_wear_update_text">Er is een nieuwe versie van Google Play-services vereist. De update wordt binnenkort automatisch uitgevoerd.</string>
+    <string name="common_open_on_phone">Openen op telefoon</string>
+    <string name="common_signin_button_text">Inloggen</string>
+    <string name="common_signin_button_text_long">Inloggen met Google</string>
+    <string name="completed_sessions_will_appear_here">Voltooide sessies verschijnen hier.</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Ongeldige invoer"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Pop-upvenster"</string>
+    <string name="discard">Verwerpen</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Dropdownmenu"</string>
+    <string name="end_set">Set beëindigen</string>
+    <string name="exercise_biceps_curl">Biceps curl</string>
+    <string name="exercise_dumbbell_chest_press">Dumbbell chest press</string>
+    <string name="exercise_dumbbell_row">Dumbbell row</string>
+    <string name="exercise_front_raise">Front raise</string>
+    <string name="exercise_hammer_curl">Hammer curl</string>
+    <string name="exercise_lateral_raise">Lateral raise</string>
+    <string name="exercise_shoulder_press">Shoulder press</string>
+    <string name="exercise_triceps_extension">Triceps extension</string>
+    <string name="exercises">Oefeningen</string>
+    <string name="finish_workout">Workout beëindigen</string>
+    <string name="free_workouts_left">%1$d gratis over</string>
+    <string name="get_ready">Maak je klaar</string>
+    <string name="go">Start</string>
+    <string name="history">Geschiedenis</string>
+    <string msgid="6827826412747255547" name="in_progress">"Bezig"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Gedeeltelijk aangevinkt"</string>
+    <string name="keep_history">Geschiedenis bewaren</string>
+    <string name="label_best_tracking_quality">Beste trackingkwaliteit</string>
+    <string name="label_experimental">Experimenteel</string>
+    <string name="label_manual_correction_may_help">Handmatige correctie kan helpen</string>
+    <string name="label_optimized">Geoptimaliseerd</string>
+    <string name="label_soon">Binnenkort</string>
+    <string name="label_tuning_in_progress">Afstemming bezig</string>
+    <string name="manual_edits_count">Handmatige aanpassingen %1$d</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigatiemenu"</string>
+    <string name="no_subscription_price">Geen abonnement • $9.99</string>
+    <string name="no_trial_limits">Geen proeflimieten</string>
+    <string name="no_workouts_yet">Nog geen workouts</string>
+    <string msgid="6610465462668679431" name="not_selected">"Niet geselecteerd"</string>
+    <string name="pay_once">Betaal één keer</string>
+    <string name="pro_unlocked">Pro ontgrendeld</string>
+    <string msgid="5941395253238309765" name="range_end">"Einde bereik"</string>
+    <string msgid="7097486360902471446" name="range_start">"Start bereik"</string>
+    <string name="rep_adjust_minus_one">-1</string>
+    <string name="rep_adjust_plus_one">+1</string>
+    <string name="reps">herh.</string>
+    <string name="reps_logged">Herhalingen opgeslagen</string>
+    <string name="rest">Rust</string>
+    <string name="save">Opslaan</string>
+    <string name="seconds_left">Seconden over</string>
+    <string msgid="6043586758067023" name="selected">"Geselecteerd"</string>
+    <string name="set_complete">Set voltooid</string>
+    <string name="set_number">Set %1$d</string>
+    <string name="skip">Overslaan</string>
+    <string name="start_workout">Workout starten</string>
+    <string name="starting_now">Start nu</string>
+    <string msgid="4139871816613051306" name="state_empty">"Leeg"</string>
+    <string msgid="5834637030682409883" name="state_off">"Uit"</string>
+    <string msgid="1490883874751719580" name="state_on">"Aan"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="status_paused">Gepauzeerd</string>
+    <string name="status_ready">Klaar</string>
+    <string name="status_rep_detected">Herhaling gedetecteerd</string>
+    <string name="status_tracking">Bezig met volgen</string>
+    <string name="summary">Samenvatting</string>
+    <string msgid="2561197295334830845" name="switch_role">"Overschakelen"</string>
+    <string msgid="1672349317127674378" name="tab">"Tabblad"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> procent."</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"tooltip"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"tooltip tonen"</string>
+    <string name="trial_used">Proef gebruikt</string>
+    <string name="unlimited_workouts">Onbeperkte workouts</string>
+    <string name="unlock_pro">Pro ontgrendelen</string>
+    <string name="workout">Workout</string>
+    <string name="workout_total">Workout totaal</string>
+</resources>

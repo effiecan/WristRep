@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WristRep</string>
+    <string name="back">Takaisin</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"Vastaa"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Video"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"Hylkää"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"Lopeta puhelu"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"Saapuva puhelu"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Käynnissä oleva puhelu"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"Seulotaan saapuvaa puhelua"</string>
+    <string msgid="406453423630273620" name="close_drawer">"Sulje navigointivalikko"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Sulje taulukko"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Ota käyttöön</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s ei toimi, ellet ota Google Play Palveluita käyttöön.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Ota Google Play Palvelut käyttöön</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Asenna</string>
+    <string name="common_google_play_services_install_text">%1$s ei toimi ilman Google Play Palveluita, jotka puuttuvat laitteeltasi.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Asenna Google Play Palvelut</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play Palveluiden saatavuus</string>
+    <string name="common_google_play_services_notification_ticker">Virhe Google Play -palveluissa</string>
+    <string name="common_google_play_services_unknown_issue">Sovelluksella %1$s on ongelmia Google Play Palveluiden kanssa. Yritä uudelleen.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s ei toimi ilman Google Play Palveluita, joita laitteesi ei tue.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Päivitä</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s ei toimi, ellet päivitä Google Play Palveluita.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Päivitä Google Play Palvelut</string>
+    <string name="common_google_play_services_updating_text">%1$s ei toimi ilman Google Play Palveluita, joita päivitetään tällä hetkellä.</string>
+    <string name="common_google_play_services_wear_update_text">Uusi Google Play Palveluiden versio tarvitaan. Se päivittyy pian.</string>
+    <string name="common_open_on_phone">Avaa puhelimessa</string>
+    <string name="common_signin_button_text">Kirjaudu sisään</string>
+    <string name="common_signin_button_text_long">Kirjaudu Google-tilille</string>
+    <string name="completed_sessions_will_appear_here">Valmiit harjoitukset näkyvät täällä.</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Virheellinen syöte"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Ponnahdusikkuna"</string>
+    <string name="discard">Hylkää</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Avattava valikko"</string>
+    <string name="end_set">Lopeta sarja</string>
+    <string name="exercise_biceps_curl">Hauiskääntö</string>
+    <string name="exercise_dumbbell_chest_press">Rintapunnerrus käsipainoilla</string>
+    <string name="exercise_dumbbell_row">Kulmasoutu käsipainolla</string>
+    <string name="exercise_front_raise">Etunosto</string>
+    <string name="exercise_hammer_curl">Vasaracurl</string>
+    <string name="exercise_lateral_raise">Sivunosto</string>
+    <string name="exercise_shoulder_press">Olkapääpunnerrus</string>
+    <string name="exercise_triceps_extension">Ojentajapunnerrus</string>
+    <string name="exercises">Harjoitteet</string>
+    <string name="finish_workout">Lopeta harjoitus</string>
+    <string name="free_workouts_left">%1$d ilmaista jäljellä</string>
+    <string name="get_ready">Valmistaudu</string>
+    <string name="go">Aloita</string>
+    <string name="history">Historia</string>
+    <string msgid="6827826412747255547" name="in_progress">"Kesken"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Osittain tarkistettu"</string>
+    <string name="keep_history">Säilytä historia</string>
+    <string name="label_best_tracking_quality">Paras seurannan laatu</string>
+    <string name="label_experimental">Kokeellinen</string>
+    <string name="label_manual_correction_may_help">Manuaalinen korjaus voi auttaa</string>
+    <string name="label_optimized">Optimoitu</string>
+    <string name="label_soon">Tulossa pian</string>
+    <string name="label_tuning_in_progress">Säätö käynnissä</string>
+    <string name="manual_edits_count">Manuaaliset muokkaukset %1$d</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigointivalikko"</string>
+    <string name="no_subscription_price">Ei tilausta • $9.99</string>
+    <string name="no_trial_limits">Ei kokeilurajoja</string>
+    <string name="no_workouts_yet">Ei vielä harjoituksia</string>
+    <string msgid="6610465462668679431" name="not_selected">"Ei valittu"</string>
+    <string name="pay_once">Maksa kerran</string>
+    <string name="pro_unlocked">Pro avattu</string>
+    <string msgid="5941395253238309765" name="range_end">"Alueen loppu"</string>
+    <string msgid="7097486360902471446" name="range_start">"Alueen alku"</string>
+    <string name="rep_adjust_minus_one">-1</string>
+    <string name="rep_adjust_plus_one">+1</string>
+    <string name="reps">toist.</string>
+    <string name="reps_logged">Toistot tallennettu</string>
+    <string name="rest">Lepo</string>
+    <string name="save">Tallenna</string>
+    <string name="seconds_left">Sekuntia jäljellä</string>
+    <string msgid="6043586758067023" name="selected">"Valittu"</string>
+    <string name="set_complete">Sarja valmis</string>
+    <string name="set_number">Sarja %1$d</string>
+    <string name="skip">Ohita</string>
+    <string name="start_workout">Aloita harjoitus</string>
+    <string name="starting_now">Alkaa nyt</string>
+    <string msgid="4139871816613051306" name="state_empty">"Tyhjä"</string>
+    <string msgid="5834637030682409883" name="state_off">"Pois päältä"</string>
+    <string msgid="1490883874751719580" name="state_on">"Päällä"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="status_paused">Tauolla</string>
+    <string name="status_ready">Valmis</string>
+    <string name="status_rep_detected">Toisto havaittu</string>
+    <string name="status_tracking">Seurataan</string>
+    <string name="summary">Yhteenveto</string>
+    <string msgid="2561197295334830845" name="switch_role">"Vaihda"</string>
+    <string msgid="1672349317127674378" name="tab">"Välilehti"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> prosenttia"</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"vihjeteksti"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"näytä vihjeteksti"</string>
+    <string name="trial_used">Kokeilu käytetty</string>
+    <string name="unlimited_workouts">Rajattomat harjoitukset</string>
+    <string name="unlock_pro">Avaa Pro</string>
+    <string name="workout">Harjoitus</string>
+    <string name="workout_total">Harjoitus yhteensä</string>
+</resources>

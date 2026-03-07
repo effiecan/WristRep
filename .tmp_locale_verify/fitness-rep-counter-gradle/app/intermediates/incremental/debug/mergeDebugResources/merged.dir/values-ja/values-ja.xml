@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WristRep</string>
+    <string name="back">戻る</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"応答"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"ビデオ"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"拒否"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"通話終了"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"着信"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"通話中"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"着信をスクリーニング中"</string>
+    <string msgid="406453423630273620" name="close_drawer">"ナビゲーションメニューを閉じる"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"シートを閉じる"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">有効にする</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$sの実行には、Google Play開発者サービスの有効化が必要です。</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play開発者サービスの有効化</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">インストール</string>
+    <string name="common_google_play_services_install_text">「%1$s」の実行には Google Play 開発者サービスが必要ですが、お使いのデバイスにはインストールされていません。</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play開発者サービスの入手</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play 開発者サービスの利用</string>
+    <string name="common_google_play_services_notification_ticker">Google Play開発者サービスのエラー</string>
+    <string name="common_google_play_services_unknown_issue">「%1$s」で Google Play 開発者サービスに問題が発生しています。もう一度お試しください。</string>
+    <string name="common_google_play_services_unsupported_text">「%1$s」の実行には Google Play 開発者サービスが必要ですが、お使いのデバイスではサポートされていません。</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">更新</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$sの実行にはGoogle Play開発者サービスの更新が必要です。</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Google Play開発者サービスの更新</string>
+    <string name="common_google_play_services_updating_text">%1$sの実行にはGoogle Play開発者サービスが必要ですが、このサービスは現在更新中です。</string>
+    <string name="common_google_play_services_wear_update_text">Google Play開発者サービスの新しいバージョンが必要です。まもなく自動更新されます。</string>
+    <string name="common_open_on_phone">スマートフォンで開く</string>
+    <string name="common_signin_button_text">ログイン</string>
+    <string name="common_signin_button_text_long">Googleにログイン</string>
+    <string name="completed_sessions_will_appear_here">完了したセッションがここに表示されます。</string>
+    <string msgid="8038256446254964252" name="default_error_message">"入力値が無効です"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"ポップアップウィンドウ"</string>
+    <string name="discard">破棄</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"プルダウン メニュー"</string>
+    <string name="end_set">セット終了</string>
+    <string name="exercise_biceps_curl">バイセップカール</string>
+    <string name="exercise_dumbbell_chest_press">ダンベルチェストプレス</string>
+    <string name="exercise_dumbbell_row">ダンベルロー</string>
+    <string name="exercise_front_raise">フロントレイズ</string>
+    <string name="exercise_hammer_curl">ハンマーカール</string>
+    <string name="exercise_lateral_raise">サイドレイズ</string>
+    <string name="exercise_shoulder_press">ショルダープレス</string>
+    <string name="exercise_triceps_extension">トライセプスエクステンション</string>
+    <string name="exercises">種目</string>
+    <string name="finish_workout">ワークアウト終了</string>
+    <string name="free_workouts_left">無料残り %1$d 回</string>
+    <string name="get_ready">準備して</string>
+    <string name="go">開始</string>
+    <string name="history">履歴</string>
+    <string msgid="6827826412747255547" name="in_progress">"処理しています"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"一部 ON"</string>
+    <string name="keep_history">履歴を保存</string>
+    <string name="label_best_tracking_quality">最高の追跡品質</string>
+    <string name="label_experimental">実験的</string>
+    <string name="label_manual_correction_may_help">手動修正が役立つ場合があります</string>
+    <string name="label_optimized">最適化済み</string>
+    <string name="label_soon">近日公開</string>
+    <string name="label_tuning_in_progress">調整中</string>
+    <string name="manual_edits_count">手動修正 %1$d</string>
+    <string msgid="542007171693138492" name="navigation_menu">"ナビゲーションメニュー"</string>
+    <string name="no_subscription_price">サブスクなし • $9.99</string>
+    <string name="no_trial_limits">体験版の制限なし</string>
+    <string name="no_workouts_yet">まだワークアウトはありません</string>
+    <string msgid="6610465462668679431" name="not_selected">"未選択"</string>
+    <string name="pay_once">一度だけ支払う</string>
+    <string name="pro_unlocked">Pro が解除されました</string>
+    <string msgid="5941395253238309765" name="range_end">"範囲の末尾"</string>
+    <string msgid="7097486360902471446" name="range_start">"範囲の先頭"</string>
+    <string name="rep_adjust_minus_one">-1</string>
+    <string name="rep_adjust_plus_one">+1</string>
+    <string name="reps">回</string>
+    <string name="reps_logged">回数を記録しました</string>
+    <string name="rest">休憩</string>
+    <string name="save">保存</string>
+    <string name="seconds_left">残り秒数</string>
+    <string msgid="6043586758067023" name="selected">"選択済み"</string>
+    <string name="set_complete">セット完了</string>
+    <string name="set_number">セット %1$d</string>
+    <string name="skip">スキップ</string>
+    <string name="start_workout">ワークアウト開始</string>
+    <string name="starting_now">今すぐ開始</string>
+    <string msgid="4139871816613051306" name="state_empty">"なし"</string>
+    <string msgid="5834637030682409883" name="state_off">"OFF"</string>
+    <string msgid="1490883874751719580" name="state_on">"ON"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="status_paused">一時停止中</string>
+    <string name="status_ready">準備完了</string>
+    <string name="status_rep_detected">回数を検出</string>
+    <string name="status_tracking">追跡中</string>
+    <string name="summary">概要</string>
+    <string msgid="2561197295334830845" name="switch_role">"切り替える"</string>
+    <string msgid="1672349317127674378" name="tab">"タブ"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g>パーセント。"</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"ツールチップ"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"ツールチップを表示"</string>
+    <string name="trial_used">体験版は使用済みです</string>
+    <string name="unlimited_workouts">無制限のワークアウト</string>
+    <string name="unlock_pro">Pro を解除</string>
+    <string name="workout">ワークアウト</string>
+    <string name="workout_total">合計</string>
+</resources>

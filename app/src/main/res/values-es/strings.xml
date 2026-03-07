@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">WristRep</string>
+
+    <string name="pro_unlocked">Pro desbloqueado</string>
+    <string name="free_workouts_left">%1$d gratis restantes</string>
+    <string name="trial_used">Prueba usada</string>
+    <string name="start_workout">Iniciar entrenamiento</string>
+    <string name="history">Historial</string>
+    <string name="exercises">Ejercicios</string>
+    <string name="back">Atrás</string>
+    <string name="go">Empezar</string>
+    <string name="get_ready">Prepárate</string>
+    <string name="starting_now">Empieza ahora</string>
+    <string name="workout">Entrenamiento</string>
+    <string name="set_number">Serie %1$d</string>
+    <string name="end_set">Terminar serie</string>
+    <string name="rep_adjust_minus_one">-1</string>
+    <string name="rep_adjust_plus_one">+1</string>
+    <string name="status_ready">Listo</string>
+    <string name="status_tracking">Detectando</string>
+    <string name="status_rep_detected">Repetición detectada</string>
+    <string name="status_paused">En pausa</string>
+    <string name="set_complete">Serie completada</string>
+    <string name="reps_logged">Repeticiones registradas</string>
+    <string name="rest">Descanso</string>
+    <string name="finish_workout">Finalizar entrenamiento</string>
+    <string name="seconds_left">Segundos restantes</string>
+    <string name="skip">Saltar</string>
+    <string name="summary">Resumen</string>
+    <string name="workout_total">Total del entrenamiento</string>
+    <string name="reps">repeticiones</string>
+    <string name="manual_edits_count">Ajustes manuales %1$d</string>
+    <string name="save">Guardar</string>
+    <string name="discard">Descartar</string>
+    <string name="no_workouts_yet">Aún no hay entrenamientos</string>
+    <string name="completed_sessions_will_appear_here">Las sesiones completadas aparecerán aquí.</string>
+    <string name="unlock_pro">Desbloquear Pro</string>
+    <string name="pay_once">Paga una vez</string>
+    <string name="unlimited_workouts">Entrenamientos ilimitados</string>
+    <string name="keep_history">Conserva el historial</string>
+    <string name="no_trial_limits">Sin límites de prueba</string>
+    <string name="no_subscription_price">Sin suscripción • 9,99 $</string>
+
+    <string name="label_optimized">Optimizado</string>
+    <string name="label_best_tracking_quality">Mejor calidad de seguimiento</string>
+    <string name="label_experimental">Experimental</string>
+    <string name="label_manual_correction_may_help">La corrección manual puede ayudar</string>
+    <string name="label_soon">Próximamente</string>
+    <string name="label_tuning_in_progress">Ajuste en curso</string>
+
+    <string name="exercise_biceps_curl">Curl de bíceps</string>
+    <string name="exercise_hammer_curl">Curl martillo</string>
+    <string name="exercise_lateral_raise">Elevación lateral</string>
+    <string name="exercise_front_raise">Elevación frontal</string>
+    <string name="exercise_shoulder_press">Press de hombros</string>
+    <string name="exercise_triceps_extension">Extensión de tríceps</string>
+    <string name="exercise_dumbbell_row">Remo con mancuernas</string>
+    <string name="exercise_dumbbell_chest_press">Press de pecho con mancuernas</string>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WristRep</string>
+    <string name="back">Späť</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"Prijať"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Video"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"Odmietnuť"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"Zložiť"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"Prichádzajúci hovor"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Prebiehajúci hovor"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"Preveruje sa prichádzajúci hovor"</string>
+    <string msgid="406453423630273620" name="close_drawer">"Zavrieť navigačnú ponuku"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Zavrieť hárok"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Povoliť</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Aplikácia %1$s bude fungovať až po povolení služieb Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Povoliť služby Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Inštalovať</string>
+    <string name="common_google_play_services_install_text">Na spustenie aplikácie %1$s sa vyžadujú služby Google Play, ktoré na zariadení nemáte.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Inštalovať služby Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Dostupnosť služieb Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Chyba služieb Google Play</string>
+    <string name="common_google_play_services_unknown_issue">Aplikácia %1$s má problémy so službami Google Play. Skúste to znova.</string>
+    <string name="common_google_play_services_unsupported_text">Aplikáciu %1$s nebude možné spustiť bez služieb Google Play, ktoré vaše zariadenie nepodporuje.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Aktualizovať</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Aplikáciu %1$s bude možné spustiť až po aktualizácii služieb Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Aktualizácia služieb Google Play</string>
+    <string name="common_google_play_services_updating_text">Na spustenie aplikácie %1$s sa vyžadujú služby Google Play, ktoré sa momentálne aktualizujú.</string>
+    <string name="common_google_play_services_wear_update_text">Vyžaduje sa nová verzia služieb Google Play. Aktualizujú sa automaticky v najbližšom čase.</string>
+    <string name="common_open_on_phone">Otvoriť v telefóne</string>
+    <string name="common_signin_button_text">Prihlásiť sa</string>
+    <string name="common_signin_button_text_long">Prihlásiť sa do účtu Google</string>
+    <string name="completed_sessions_will_appear_here">Dokončené tréningy sa zobrazia tu.</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Neplatný vstup"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Vyskakovacie okno"</string>
+    <string name="discard">Zahodiť</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Rozbaľovacia ponuka"</string>
+    <string name="end_set">Ukončiť sériu</string>
+    <string name="exercise_biceps_curl">Bicepsový zdvih</string>
+    <string name="exercise_dumbbell_chest_press">Tlaky s jednoručkami na hrudník</string>
+    <string name="exercise_dumbbell_row">Príťah jednoručky</string>
+    <string name="exercise_front_raise">Predpažovanie</string>
+    <string name="exercise_hammer_curl">Kladivový zdvih</string>
+    <string name="exercise_lateral_raise">Upažovanie</string>
+    <string name="exercise_shoulder_press">Tlaky na ramená</string>
+    <string name="exercise_triceps_extension">Tricepsové extenzie</string>
+    <string name="exercises">Cviky</string>
+    <string name="finish_workout">Ukončiť tréning</string>
+    <string name="free_workouts_left">Zostáva zdarma: %1$d</string>
+    <string name="get_ready">Pripravte sa</string>
+    <string name="go">Štart</string>
+    <string name="history">História</string>
+    <string msgid="6827826412747255547" name="in_progress">"Prebieha"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Čiastočne začiarknuté"</string>
+    <string name="keep_history">Zachovať históriu</string>
+    <string name="label_best_tracking_quality">Najlepšia kvalita sledovania</string>
+    <string name="label_experimental">Experimentálne</string>
+    <string name="label_manual_correction_may_help">Ručná oprava môže pomôcť</string>
+    <string name="label_optimized">Optimalizované</string>
+    <string name="label_soon">Čoskoro</string>
+    <string name="label_tuning_in_progress">Ladenie prebieha</string>
+    <string name="manual_edits_count">Ručné úpravy %1$d</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigačná ponuka"</string>
+    <string name="no_subscription_price">Bez predplatného • $9.99</string>
+    <string name="no_trial_limits">Bez limitov skúšobnej verzie</string>
+    <string name="no_workouts_yet">Zatiaľ žiadne tréningy</string>
+    <string msgid="6610465462668679431" name="not_selected">"Nevybrané"</string>
+    <string name="pay_once">Zaplatiť raz</string>
+    <string name="pro_unlocked">Pro odomknuté</string>
+    <string msgid="5941395253238309765" name="range_end">"Koniec rozsahu"</string>
+    <string msgid="7097486360902471446" name="range_start">"Začiatok rozsahu"</string>
+    <string name="rep_adjust_minus_one">-1</string>
+    <string name="rep_adjust_plus_one">+1</string>
+    <string name="reps">opak.</string>
+    <string name="reps_logged">Opakovania uložené</string>
+    <string name="rest">Oddych</string>
+    <string name="save">Uložiť</string>
+    <string name="seconds_left">Zostávajúce sekundy</string>
+    <string msgid="6043586758067023" name="selected">"Vybrané"</string>
+    <string name="set_complete">Séria dokončená</string>
+    <string name="set_number">Séria %1$d</string>
+    <string name="skip">Preskočiť</string>
+    <string name="start_workout">Začať tréning</string>
+    <string name="starting_now">Začíname teraz</string>
+    <string msgid="4139871816613051306" name="state_empty">"Prázdne"</string>
+    <string msgid="5834637030682409883" name="state_off">"Vypnuté"</string>
+    <string msgid="1490883874751719580" name="state_on">"Zapnuté"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="status_paused">Pozastavené</string>
+    <string name="status_ready">Pripravené</string>
+    <string name="status_rep_detected">Opakovanie zaznamenané</string>
+    <string name="status_tracking">Sledovanie</string>
+    <string name="summary">Súhrn</string>
+    <string msgid="2561197295334830845" name="switch_role">"Prepnúť"</string>
+    <string msgid="1672349317127674378" name="tab">"Karta"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> %%"</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"popis"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"zobraziť popis"</string>
+    <string name="trial_used">Skúšobná verzia použitá</string>
+    <string name="unlimited_workouts">Neobmedzené tréningy</string>
+    <string name="unlock_pro">Odomknúť Pro</string>
+    <string name="workout">Tréning</string>
+    <string name="workout_total">Tréning celkom</string>
+</resources>

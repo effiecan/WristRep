@@ -1,13 +1,16 @@
 package com.fitnessrepcounter.wear.presentation.screens.workout
 
+import android.content.Context
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsEnabled
 import androidx.compose.ui.test.junit4.createComposeRule
-import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.fitnessrepcounter.wear.R
 import com.fitnessrepcounter.wear.domain.model.Exercise
 import com.fitnessrepcounter.wear.presentation.state.WorkoutUiState
 import com.fitnessrepcounter.wear.ui.theme.FitnessRepCounterTheme
@@ -19,6 +22,8 @@ import org.junit.runner.RunWith
 class ActiveWorkoutScreenTest {
     @get:Rule
     val composeTestRule = createComposeRule()
+
+    private val context: Context = ApplicationProvider.getApplicationContext()
 
     @Test
     fun activeWorkout_showsBottomActionRow_andNoExperimentalHelperCopy() {
@@ -37,15 +42,15 @@ class ActiveWorkoutScreenTest {
             }
         }
 
-        composeTestRule.onNodeWithText("Triceps Extension").assertIsDisplayed()
-        composeTestRule.onNodeWithText("Set 1").assertIsDisplayed()
+        composeTestRule.onNodeWithText(context.getString(R.string.exercise_triceps_extension)).assertIsDisplayed()
+        composeTestRule.onNodeWithText(context.getString(R.string.set_number, 1)).assertIsDisplayed()
         composeTestRule.onNodeWithText("0").assertIsDisplayed()
         composeTestRule.onNodeWithTag("active_workout_status").assertIsDisplayed()
         composeTestRule.onNodeWithTag("active_workout_actions").assertIsDisplayed()
-        composeTestRule.onNodeWithText("-1").assertIsDisplayed()
+        composeTestRule.onNodeWithText(context.getString(R.string.rep_adjust_minus_one)).assertIsDisplayed()
         composeTestRule.onNodeWithTag("end_set_button").assertIsDisplayed().assertIsEnabled()
-        composeTestRule.onNodeWithText("+1").assertIsDisplayed()
-        composeTestRule.onAllNodesWithText("Experimental").assertCountEquals(0)
+        composeTestRule.onNodeWithText(context.getString(R.string.rep_adjust_plus_one)).assertIsDisplayed()
+        composeTestRule.onAllNodesWithText(context.getString(R.string.label_experimental)).assertCountEquals(0)
         composeTestRule.onAllNodesWithText("Manual correction stays available.").assertCountEquals(0)
     }
 
@@ -67,7 +72,7 @@ class ActiveWorkoutScreenTest {
         }
 
         composeTestRule.onNodeWithTag("active_workout_title").assertIsDisplayed()
-        composeTestRule.onNodeWithText("Triceps Extension").assertIsDisplayed()
+        composeTestRule.onNodeWithText(context.getString(R.string.exercise_triceps_extension)).assertIsDisplayed()
         composeTestRule.onNodeWithTag("active_workout_actions").assertIsDisplayed()
     }
 }

@@ -1,0 +1,5 @@
+C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\app\src\androidTest\java\com\fitnessrepcounter\wear\presentation\screens\exercise\ExerciseSelectionScreenTest.kt
+C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\app\src\androidTest\java\com\fitnessrepcounter\wear\presentation\screens\paywall\PaywallScreenTest.kt
+C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\app\src\androidTest\java\com\fitnessrepcounter\wear\presentation\screens\workout\RestTimerScreenTest.kt
+C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\app\src\androidTest\java\com\fitnessrepcounter\wear\presentation\screens\workout\ActiveWorkoutScreenTest.kt
+C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\app\src\androidTest\java\com\fitnessrepcounter\wear\presentation\resources\StringResourcesLocalizationTest.kt

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WristRep</string>
+    <string name="back">பின்</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"பதிலளி"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"வீடியோ"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"நிராகரி"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"துண்டி"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"உள்வரும் அழைப்பு"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"செயலில் இருக்கும் அழைப்பு"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"உள்வரும் அழைப்பை மதிப்பாய்வு செய்கிறது"</string>
+    <string msgid="406453423630273620" name="close_drawer">"வழிசெலுத்தல் மெனுவை மூடும்"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"ஷீட்டை மூடும்"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">இயக்கு</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Google Play சேவைகளை இயக்கினால் மட்டுமே, %1$s செயல்படும்.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play சேவைகளை இயக்கவும்</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">நிறுவு</string>
+    <string name="common_google_play_services_install_text">Google Play சேவைகள் இருந்தால் மட்டுமே, %1$s இயங்கும். அவை உங்கள் சாதனத்தில் இல்லை.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play சேவைகளைப் பெறவும்</string>
+    <string name="common_google_play_services_notification_channel_name">கிடைக்கும் Google Play சேவைகள்</string>
+    <string name="common_google_play_services_notification_ticker">Google Play சேவைகள் பிழை</string>
+    <string name="common_google_play_services_unknown_issue">Google Play சேவைகளில் சிக்கல் ஏற்பட்டதால், %1$s ஆப்ஸை அணுக முடியவில்லை. மீண்டும் முயலவும்.</string>
+    <string name="common_google_play_services_unsupported_text">Google Play சேவைகள் இருந்தால் மட்டுமே %1$s ஆப்ஸ் இயங்கும். ஆனால், உங்கள் சாதனத்தில் அவை ஆதரிக்கப்படவில்லை.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">புதுப்பி</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Google Play சேவைகளை இயக்கினால் மட்டுமே, %1$s செயல்படும்.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Google Play சேவைகளைப் புதுப்பிக்கவும்</string>
+    <string name="common_google_play_services_updating_text">தற்போது புதுப்பிக்கப்படும், Google Play சேவைகள் இருந்தால் மட்டுமே, %1$s செயல்படும்.</string>
+    <string name="common_google_play_services_wear_update_text">Google Play சேவைகளின் புதிய பதிப்பு தேவை. அது விரைவில் தானாகவே புதுப்பிக்கப்படும்.</string>
+    <string name="common_open_on_phone">மொபைலில் திற</string>
+    <string name="common_signin_button_text">உள்நுழைக</string>
+    <string name="common_signin_button_text_long">Google மூலம் உள்நுழைக</string>
+    <string name="completed_sessions_will_appear_here">முடிக்கப்பட்ட அமர்வுகள் இங்கே காணப்படும்.</string>
+    <string msgid="8038256446254964252" name="default_error_message">"தவறான உள்ளீடு"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"பாப்-அப் சாளரம்"</string>
+    <string name="discard">நிராகரி</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"கீழ்த்தோன்றல் மெனு"</string>
+    <string name="end_set">செட்டை முடி</string>
+    <string name="exercise_biceps_curl">பைசெப்ஸ் கர்ல்</string>
+    <string name="exercise_dumbbell_chest_press">டம்ப்பெல் செஸ்ட் பிரஸ்</string>
+    <string name="exercise_dumbbell_row">டம்ப்பெல் ரோ</string>
+    <string name="exercise_front_raise">ஃப்ரண்ட் ரெய்ஸ்</string>
+    <string name="exercise_hammer_curl">ஹாமர் கர்ல்</string>
+    <string name="exercise_lateral_raise">லாட்டரல் ரெய்ஸ்</string>
+    <string name="exercise_shoulder_press">ஷோல்டர் பிரஸ்</string>
+    <string name="exercise_triceps_extension">ட்ரைசெப்ஸ் எக்ஸ்டென்ஷன்</string>
+    <string name="exercises">பயிற்சிகள்</string>
+    <string name="finish_workout">பயிற்சியை முடி</string>
+    <string name="free_workouts_left">%1$d இலவசம் மீதம்</string>
+    <string name="get_ready">தயார் ஆகுங்கள்</string>
+    <string name="go">தொடங்கு</string>
+    <string name="history">வரலாறு</string>
+    <string msgid="6827826412747255547" name="in_progress">"செயலிலுள்ளது"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"சில மட்டுமே தேர்ந்தெடுக்கப்பட்டுள்ளன"</string>
+    <string name="keep_history">வரலாற்றை வைத்திருங்கள்</string>
+    <string name="label_best_tracking_quality">சிறந்த கண்காணிப்பு தரம்</string>
+    <string name="label_experimental">சோதனை நிலை</string>
+    <string name="label_manual_correction_may_help">கைமுறை திருத்தம் உதவலாம்</string>
+    <string name="label_optimized">மேம்படுத்தப்பட்டது</string>
+    <string name="label_soon">விரைவில்</string>
+    <string name="label_tuning_in_progress">சீரமைப்பு நடைபெறுகிறது</string>
+    <string name="manual_edits_count">கைமுறை திருத்தங்கள் %1$d</string>
+    <string msgid="542007171693138492" name="navigation_menu">"வழிசெலுத்தல் மெனு"</string>
+    <string name="no_subscription_price">சந்தா இல்லை • $9.99</string>
+    <string name="no_trial_limits">சோதனைக்கு வரம்பில்லை</string>
+    <string name="no_workouts_yet">இன்னும் பயிற்சிகள் இல்லை</string>
+    <string msgid="6610465462668679431" name="not_selected">"தேர்ந்தெடுக்கப்படவில்லை"</string>
+    <string name="pay_once">ஒருமுறை மட்டும் செலுத்துங்கள்</string>
+    <string name="pro_unlocked">Pro திறக்கப்பட்டது</string>
+    <string msgid="5941395253238309765" name="range_end">"வரம்பு முடிவு"</string>
+    <string msgid="7097486360902471446" name="range_start">"வரம்பு தொடக்கம்"</string>
+    <string name="rep_adjust_minus_one">-1</string>
+    <string name="rep_adjust_plus_one">+1</string>
+    <string name="reps">முறை</string>
+    <string name="reps_logged">மீள்தொடர்கள் சேமிக்கப்பட்டன</string>
+    <string name="rest">ஓய்வு</string>
+    <string name="save">சேமி</string>
+    <string name="seconds_left">மீதமுள்ள விநாடிகள்</string>
+    <string msgid="6043586758067023" name="selected">"தேர்ந்தெடுக்கப்பட்டுள்ளது"</string>
+    <string name="set_complete">செட் முடிந்தது</string>
+    <string name="set_number">செட் %1$d</string>
+    <string name="skip">தவிர்</string>
+    <string name="start_workout">பயிற்சியை தொடங்கு</string>
+    <string name="starting_now">இப்போது தொடங்குகிறது</string>
+    <string msgid="4139871816613051306" name="state_empty">"காலியாக உள்ளது"</string>
+    <string msgid="5834637030682409883" name="state_off">"ஆஃப்"</string>
+    <string msgid="1490883874751719580" name="state_on">"ஆன்"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="status_paused">இடைநிறுத்தப்பட்டது</string>
+    <string name="status_ready">தயார்</string>
+    <string name="status_rep_detected">மீள்தொடர் கண்டறியப்பட்டது</string>
+    <string name="status_tracking">கண்காணிக்கிறது</string>
+    <string name="summary">சுருக்கம்</string>
+    <string msgid="2561197295334830845" name="switch_role">"மாற்றுதல்"</string>
+    <string msgid="1672349317127674378" name="tab">"பிரிவு"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> சதவீதம்."</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"உதவிக்குறிப்பு"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"உதவிக்குறிப்பைக் காட்டும்"</string>
+    <string name="trial_used">சோதனை பயன்படுத்தப்பட்டது</string>
+    <string name="unlimited_workouts">வரம்பற்ற பயிற்சிகள்</string>
+    <string name="unlock_pro">Pro திறக்கவும்</string>
+    <string name="workout">பயிற்சி</string>
+    <string name="workout_total">மொத்த பயிற்சி</string>
+</resources>

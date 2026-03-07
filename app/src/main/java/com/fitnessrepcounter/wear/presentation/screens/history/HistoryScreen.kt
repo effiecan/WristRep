@@ -10,7 +10,9 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.fitnessrepcounter.wear.R
 import com.fitnessrepcounter.wear.presentation.components.CenterMessage
 import com.fitnessrepcounter.wear.presentation.components.HistoryRowCard
 import com.fitnessrepcounter.wear.presentation.components.ScreenTitle
@@ -33,13 +35,13 @@ fun HistoryScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
     ) {
-        ScreenTitle(title = "History")
+        ScreenTitle(title = stringResource(R.string.history))
         Spacer(modifier = Modifier.height(18.dp))
         if (uiState.workouts.isEmpty()) {
             Spacer(modifier = Modifier.weight(1f))
             CenterMessage(
-                title = "No workouts yet",
-                body = "Completed sessions will appear here.",
+                title = stringResource(R.string.no_workouts_yet),
+                body = stringResource(R.string.completed_sessions_will_appear_here),
             )
             Spacer(modifier = Modifier.weight(1f))
         } else {
@@ -52,7 +54,7 @@ fun HistoryScreen(
             ) {
                 uiState.workouts.forEach { workout ->
                     HistoryRowCard(
-                        title = workout.exercise.displayName,
+                        title = stringResource(workout.exercise.displayNameRes),
                         subtitle = formatter.format(Instant.ofEpochMilli(workout.endedAtEpochMs)),
                         value = "${workout.totalReps}",
                     )
@@ -61,7 +63,7 @@ fun HistoryScreen(
             Spacer(modifier = Modifier.height(10.dp))
         }
         SecondaryActionButton(
-            text = "Back",
+            text = stringResource(R.string.back),
             onClick = onBack,
             modifier = Modifier.fillMaxWidth(0.62f),
         )

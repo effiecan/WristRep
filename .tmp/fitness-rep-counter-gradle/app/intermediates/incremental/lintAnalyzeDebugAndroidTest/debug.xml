@@ -1,0 +1,30 @@
+<variant
+    name="debug"
+    package="com.fitnessrepcounter.wear"
+    minSdkVersion="30"
+    targetSdkVersion="35"
+    debuggable="true"
+    mergedManifest="C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\intermediates\merged_manifest\debug\processDebugMainManifest\AndroidManifest.xml"
+    partialResultsDir="C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\intermediates\android_test_lint_partial_results\debug\lintAnalyzeDebugAndroidTest\out"
+    desugaredMethodsFiles="C:\Users\efe_s\.gradle\caches\transforms-4\c869c59d066147b0fa673a6c1a1f9a10\transformed\D8BackportedDesugaredMethods.txt">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+  </sourceProviders>
+  <testSourceProviders>
+    <sourceProvider
+        manifests="src\androidTest\AndroidManifest.xml"
+        javaDirectories="src\androidTest\java;src\androidTestDebug\java;src\androidTest\kotlin;src\androidTestDebug\kotlin"
+        resDirectories="src\androidTest\res;src\androidTestDebug\res"
+        assetsDirectories="src\androidTest\assets;src\androidTestDebug\assets"
+        androidTest="true"/>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <artifact
+      type="INSTRUMENTATION_TEST"
+      applicationId="com.fitnessrepcounter.wear.test"
+      generatedResourceFolders="C:\Users\efe_s\OneDrive\Desktop\WristRep\WristRep\.tmp\fitness-rep-counter-gradle\app\generated\res\resValues\androidTest\debug"
+      desugaredMethodsFiles="C:\Users\efe_s\.gradle\caches\transforms-4\c869c59d066147b0fa673a6c1a1f9a10\transformed\D8BackportedDesugaredMethods.txt">
+  </artifact>
+</variant>

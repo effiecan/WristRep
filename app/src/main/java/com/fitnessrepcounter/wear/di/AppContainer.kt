@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.datastore.preferences.core.PreferenceDataStoreFactory
 import androidx.datastore.preferences.preferencesDataStoreFile
 import androidx.room.Room
+import com.fitnessrepcounter.wear.data.billing.GooglePlayBillingClient
+import com.fitnessrepcounter.wear.data.billing.ProBillingClient
 import com.fitnessrepcounter.wear.data.local.datastore.EntitlementDataStore
 import com.fitnessrepcounter.wear.data.local.room.WorkoutDatabase
 import com.fitnessrepcounter.wear.data.repository.EntitlementRepositoryImpl
@@ -47,8 +49,15 @@ class AppContainer(context: Context) {
         WorkoutRepositoryImpl(database.workoutDao())
     }
 
+    private val proBillingClient: ProBillingClient by lazy {
+        GooglePlayBillingClient(appContext)
+    }
+
     val entitlementRepository: EntitlementRepository by lazy {
-        EntitlementRepositoryImpl(entitlementStore)
+        EntitlementRepositoryImpl(
+            entitlementDataStore = entitlementStore,
+            billingClient = proBillingClient,
+        )
     }
 
     val motionRepository: MotionRepository by lazy {

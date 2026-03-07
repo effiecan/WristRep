@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">WristRep</string>
+    <string name="back">Tillbaka</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"Svara"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Video"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"Avvisa"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"Lägg på"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"Inkommande samtal"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Pågående samtal"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"Ett inkommande samtal filtreras"</string>
+    <string msgid="406453423630273620" name="close_drawer">"Stäng navigeringsmenyn"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Stäng kalkylarket"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Aktivera</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s fungerar inte om du inte aktiverar Google Play-tjänster.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Aktivera Google Play-tjänster</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Installera</string>
+    <string name="common_google_play_services_install_text">%1$s kan inte köras utan Google Play-tjänsterna, som saknas på enheten.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Hämta Google Play-tjänster</string>
+    <string name="common_google_play_services_notification_channel_name">Tillgänglighet för Google Plays tjänster</string>
+    <string name="common_google_play_services_notification_ticker">Fel på Google Play-tjänster</string>
+    <string name="common_google_play_services_unknown_issue">Det har uppstått ett fel mellan %1$s och Google Play-tjänsterna. Försök igen.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s fungerar inte utan Google Play-tjänsterna, som inte stöds på enheten.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Uppdatera</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s kan inte köras om du inte uppdaterar Google Play-tjänsterna.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Uppdatera Google Play-tjänster</string>
+    <string name="common_google_play_services_updating_text">%1$s kan inte köras utan Google Play-tjänster, och dessa uppdateras för närvarande.</string>
+    <string name="common_google_play_services_wear_update_text">En ny version av Google Play-tjänster krävs. Den uppdateras automatiskt inom kort.</string>
+    <string name="common_open_on_phone">Öppna på mobilen</string>
+    <string name="common_signin_button_text">Logga in</string>
+    <string name="common_signin_button_text_long">Logga in med Google</string>
+    <string name="completed_sessions_will_appear_here">Avslutade pass visas här.</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Ogiltiga indata"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Popup-fönster"</string>
+    <string name="discard">Kasta</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Rullgardinsmeny"</string>
+    <string name="end_set">Avsluta set</string>
+    <string name="exercise_biceps_curl">Bicepscurl</string>
+    <string name="exercise_dumbbell_chest_press">Hantelpress för bröst</string>
+    <string name="exercise_dumbbell_row">Hantelrodd</string>
+    <string name="exercise_front_raise">Frontlyft</string>
+    <string name="exercise_hammer_curl">Hammercurl</string>
+    <string name="exercise_lateral_raise">Sidolyft</string>
+    <string name="exercise_shoulder_press">Axelpress</string>
+    <string name="exercise_triceps_extension">Tricepsextension</string>
+    <string name="exercises">Övningar</string>
+    <string name="finish_workout">Avsluta träning</string>
+    <string name="free_workouts_left">%1$d gratis kvar</string>
+    <string name="get_ready">Gör dig redo</string>
+    <string name="go">Starta</string>
+    <string name="history">Historik</string>
+    <string msgid="6827826412747255547" name="in_progress">"Pågår"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Delvis markerad"</string>
+    <string name="keep_history">Behåll historik</string>
+    <string name="label_best_tracking_quality">Bästa spårningskvalitet</string>
+    <string name="label_experimental">Experimentell</string>
+    <string name="label_manual_correction_may_help">Manuell korrigering kan hjälpa</string>
+    <string name="label_optimized">Optimerad</string>
+    <string name="label_soon">Snart</string>
+    <string name="label_tuning_in_progress">Finjustering pågår</string>
+    <string name="manual_edits_count">Manuella ändringar %1$d</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigeringsmeny"</string>
+    <string name="no_subscription_price">Ingen prenumeration • $9.99</string>
+    <string name="no_trial_limits">Inga testbegränsningar</string>
+    <string name="no_workouts_yet">Inga träningspass ännu</string>
+    <string msgid="6610465462668679431" name="not_selected">"Inte vald"</string>
+    <string name="pay_once">Betala en gång</string>
+    <string name="pro_unlocked">Pro upplåst</string>
+    <string msgid="5941395253238309765" name="range_end">"Intervallets slut"</string>
+    <string msgid="7097486360902471446" name="range_start">"Intervallets början"</string>
+    <string name="rep_adjust_minus_one">-1</string>
+    <string name="rep_adjust_plus_one">+1</string>
+    <string name="reps">rep</string>
+    <string name="reps_logged">Repetitioner sparade</string>
+    <string name="rest">Vila</string>
+    <string name="save">Spara</string>
+    <string name="seconds_left">Sekunder kvar</string>
+    <string msgid="6043586758067023" name="selected">"Valt"</string>
+    <string name="set_complete">Set klart</string>
+    <string name="set_number">Set %1$d</string>
+    <string name="skip">Hoppa över</string>
+    <string name="start_workout">Starta träningspass</string>
+    <string name="starting_now">Startar nu</string>
+    <string msgid="4139871816613051306" name="state_empty">"Tom"</string>
+    <string msgid="5834637030682409883" name="state_off">"Av"</string>
+    <string msgid="1490883874751719580" name="state_on">"På"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="status_paused">Pausad</string>
+    <string name="status_ready">Redo</string>
+    <string name="status_rep_detected">Repetition registrerad</string>
+    <string name="status_tracking">Spårar</string>
+    <string name="summary">Sammanfattning</string>
+    <string msgid="2561197295334830845" name="switch_role">"Reglage"</string>
+    <string msgid="1672349317127674378" name="tab">"Flik"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> procent."</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"beskrivning"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"visa beskrivning"</string>
+    <string name="trial_used">Testperiod använd</string>
+    <string name="unlimited_workouts">Obegränsade träningspass</string>
+    <string name="unlock_pro">Lås upp Pro</string>
+    <string name="workout">Träning</string>
+    <string name="workout_total">Träning totalt</string>
+</resources>

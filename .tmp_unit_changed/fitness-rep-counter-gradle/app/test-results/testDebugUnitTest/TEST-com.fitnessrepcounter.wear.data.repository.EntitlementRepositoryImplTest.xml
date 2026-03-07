@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.fitnessrepcounter.wear.data.repository.EntitlementRepositoryImplTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-03-07T13:48:30" hostname="EFECAN" time="0.426">
+  <properties/>
+  <testcase name="refillFreeTrialsForDebug_resetsUsage_withoutUnlockingPro" classname="com.fitnessrepcounter.wear.data.repository.EntitlementRepositoryImplTest" time="0.315"/>
+  <testcase name="syncBillingState_delegatesToBillingClient" classname="com.fitnessrepcounter.wear.data.repository.EntitlementRepositoryImplTest" time="0.003"/>
+  <testcase name="reserveAndClearActiveTrial_preservesFreeUseWhenNeverConsumed" classname="com.fitnessrepcounter.wear.data.repository.EntitlementRepositoryImplTest" time="0.014"/>
+  <testcase name="activeReservation_keepsWorkoutStartAvailable_whenFreeCountIsExhausted" classname="com.fitnessrepcounter.wear.data.repository.EntitlementRepositoryImplTest" time="0.032"/>
+  <testcase name="pendingBillingPurchase_doesNotUnlockPro" classname="com.fitnessrepcounter.wear.data.repository.EntitlementRepositoryImplTest" time="0.008"/>
+  <testcase name="reconcileCompletedWorkoutUsage_usesSavedWorkoutCount" classname="com.fitnessrepcounter.wear.data.repository.EntitlementRepositoryImplTest" time="0.014"/>
+  <testcase name="consumeActiveTrialSession_capsAtThree_andOnlyConsumesOncePerReservation" classname="com.fitnessrepcounter.wear.data.repository.EntitlementRepositoryImplTest" time="0.032"/>
+  <testcase name="ownedBillingPurchase_unlocksPro" classname="com.fitnessrepcounter.wear.data.repository.EntitlementRepositoryImplTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

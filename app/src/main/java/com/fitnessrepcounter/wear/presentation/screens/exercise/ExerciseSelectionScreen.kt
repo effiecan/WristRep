@@ -13,12 +13,14 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.fitnessrepcounter.wear.R
 import com.fitnessrepcounter.wear.domain.model.Exercise
 import com.fitnessrepcounter.wear.domain.model.isSelectable
 import com.fitnessrepcounter.wear.domain.model.isVisibleInList
-import com.fitnessrepcounter.wear.domain.model.statusLabel
-import com.fitnessrepcounter.wear.domain.model.supportingLabel
+import com.fitnessrepcounter.wear.domain.model.statusLabelRes
+import com.fitnessrepcounter.wear.domain.model.supportingLabelRes
 import com.fitnessrepcounter.wear.presentation.components.BadgeTone
 import com.fitnessrepcounter.wear.presentation.components.ExerciseRowCard
 import com.fitnessrepcounter.wear.presentation.components.ScrollFadeHint
@@ -28,6 +30,7 @@ import com.fitnessrepcounter.wear.presentation.state.WorkoutUiState
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 
+@Suppress("UNUSED_PARAMETER")
 @Composable
 fun ExerciseSelectionScreen(
     uiState: WorkoutUiState,
@@ -43,7 +46,7 @@ fun ExerciseSelectionScreen(
     ) {
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "Exercises",
+            text = stringResource(R.string.exercises),
             style = MaterialTheme.typography.title1,
         )
         Spacer(modifier = Modifier.height(6.dp))
@@ -62,9 +65,9 @@ fun ExerciseSelectionScreen(
             ) {
                 exercises.forEach { exercise ->
                     ExerciseRowCard(
-                        title = exercise.displayName,
-                        subtitle = exercise.supportingLabel,
-                        statusLabel = exercise.statusLabel,
+                        title = stringResource(exercise.displayNameRes),
+                        subtitle = stringResource(exercise.supportingLabelRes),
+                        statusLabel = stringResource(exercise.statusLabelRes),
                         badgeTone = when (exercise.supportLevel) {
                             com.fitnessrepcounter.wear.domain.model.ExerciseSupportLevel.OPTIMIZED -> BadgeTone.ACCENT
                             com.fitnessrepcounter.wear.domain.model.ExerciseSupportLevel.EXPERIMENTAL -> BadgeTone.WARM
@@ -80,7 +83,7 @@ fun ExerciseSelectionScreen(
         }
         Spacer(modifier = Modifier.height(8.dp))
         SecondaryActionButton(
-            text = "Back",
+            text = stringResource(R.string.back),
             onClick = onBack,
             modifier = Modifier.fillMaxWidth(0.46f),
             height = 34.dp,

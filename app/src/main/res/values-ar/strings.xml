@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">WristRep</string>
+
+    <string name="pro_unlocked">تم فتح Pro</string>
+    <string name="free_workouts_left">المتبقي مجانًا: %1$d</string>
+    <string name="trial_used">تم استخدام التجربة</string>
+    <string name="start_workout">ابدأ التمرين</string>
+    <string name="history">السجل</string>
+    <string name="exercises">التمارين</string>
+    <string name="back">رجوع</string>
+    <string name="go">ابدأ</string>
+    <string name="get_ready">استعد</string>
+    <string name="starting_now">يبدأ الآن</string>
+    <string name="workout">التمرين</string>
+    <string name="set_number">الجولة %1$d</string>
+    <string name="end_set">إنهاء الجولة</string>
+    <string name="rep_adjust_minus_one">-1</string>
+    <string name="rep_adjust_plus_one">+1</string>
+    <string name="status_ready">جاهز</string>
+    <string name="status_tracking">جارٍ التتبع</string>
+    <string name="status_rep_detected">تم اكتشاف تكرار</string>
+    <string name="status_paused">متوقف مؤقتًا</string>
+    <string name="set_complete">اكتملت الجولة</string>
+    <string name="reps_logged">تم تسجيل التكرارات</string>
+    <string name="rest">راحة</string>
+    <string name="finish_workout">إنهاء التمرين</string>
+    <string name="seconds_left">الثواني المتبقية</string>
+    <string name="skip">تخطي</string>
+    <string name="summary">الملخص</string>
+    <string name="workout_total">إجمالي التمرين</string>
+    <string name="reps">تكرار</string>
+    <string name="manual_edits_count">تعديلات يدوية %1$d</string>
+    <string name="save">حفظ</string>
+    <string name="discard">تجاهل</string>
+    <string name="no_workouts_yet">لا توجد تمارين بعد</string>
+    <string name="completed_sessions_will_appear_here">ستظهر الجلسات المكتملة هنا.</string>
+    <string name="unlock_pro">افتح Pro</string>
+    <string name="pay_once">ادفع مرة واحدة</string>
+    <string name="unlimited_workouts">تمارين غير محدودة</string>
+    <string name="keep_history">احتفظ بالسجل</string>
+    <string name="no_trial_limits">بدون حدود للتجربة</string>
+    <string name="no_subscription_price">بدون اشتراك • $9.99</string>
+
+    <string name="label_optimized">محسّن</string>
+    <string name="label_best_tracking_quality">أفضل جودة تتبع</string>
+    <string name="label_experimental">تجريبي</string>
+    <string name="label_manual_correction_may_help">قد يساعد التصحيح اليدوي</string>
+    <string name="label_soon">قريبًا</string>
+    <string name="label_tuning_in_progress">جارٍ الضبط</string>
+
+    <string name="exercise_biceps_curl">تمرين بايسبس كيرل</string>
+    <string name="exercise_hammer_curl">هامر كيرل</string>
+    <string name="exercise_lateral_raise">رفع جانبي</string>
+    <string name="exercise_front_raise">رفع أمامي</string>
+    <string name="exercise_shoulder_press">ضغط الكتف</string>
+    <string name="exercise_triceps_extension">تمديد الترايسبس</string>
+    <string name="exercise_dumbbell_row">تجديف بالدمبل</string>
+    <string name="exercise_dumbbell_chest_press">ضغط صدر بالدمبل</string>
+</resources>

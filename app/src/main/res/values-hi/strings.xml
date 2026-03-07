@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">WristRep</string>
+
+    <string name="pro_unlocked">Pro अनलॉक हो गया</string>
+    <string name="free_workouts_left">%1$d मुफ़्त बाकी</string>
+    <string name="trial_used">ट्रायल इस्तेमाल हो चुका है</string>
+    <string name="start_workout">वर्कआउट शुरू करें</string>
+    <string name="history">इतिहास</string>
+    <string name="exercises">एक्सरसाइज़</string>
+    <string name="back">वापस</string>
+    <string name="go">शुरू करें</string>
+    <string name="get_ready">तैयार हो जाएँ</string>
+    <string name="starting_now">अभी शुरू हो रहा है</string>
+    <string name="workout">वर्कआउट</string>
+    <string name="set_number">सेट %1$d</string>
+    <string name="end_set">सेट समाप्त करें</string>
+    <string name="rep_adjust_minus_one">-1</string>
+    <string name="rep_adjust_plus_one">+1</string>
+    <string name="status_ready">तैयार</string>
+    <string name="status_tracking">ट्रैक हो रहा है</string>
+    <string name="status_rep_detected">रेप पता चला</string>
+    <string name="status_paused">रुका हुआ</string>
+    <string name="set_complete">सेट पूरा हुआ</string>
+    <string name="reps_logged">रेप सहेजे गए</string>
+    <string name="rest">आराम</string>
+    <string name="finish_workout">वर्कआउट समाप्त करें</string>
+    <string name="seconds_left">सेकंड बाकी</string>
+    <string name="skip">स्किप करें</string>
+    <string name="summary">सारांश</string>
+    <string name="workout_total">कुल वर्कआउट</string>
+    <string name="reps">रेप</string>
+    <string name="manual_edits_count">मैनुअल बदलाव %1$d</string>
+    <string name="save">सेव करें</string>
+    <string name="discard">रद्द करें</string>
+    <string name="no_workouts_yet">अभी तक कोई वर्कआउट नहीं</string>
+    <string name="completed_sessions_will_appear_here">पूरा किए गए सेशन यहाँ दिखेंगे।</string>
+    <string name="unlock_pro">Pro अनलॉक करें</string>
+    <string name="pay_once">एक बार भुगतान करें</string>
+    <string name="unlimited_workouts">असीमित वर्कआउट</string>
+    <string name="keep_history">इतिहास सुरक्षित रखें</string>
+    <string name="no_trial_limits">ट्रायल की कोई सीमा नहीं</string>
+    <string name="no_subscription_price">कोई सब्सक्रिप्शन नहीं • $9.99</string>
+
+    <string name="label_optimized">ऑप्टिमाइज़्ड</string>
+    <string name="label_best_tracking_quality">सबसे अच्छी ट्रैकिंग क्वालिटी</string>
+    <string name="label_experimental">प्रायोगिक</string>
+    <string name="label_manual_correction_may_help">मैनुअल सुधार मदद कर सकता है</string>
+    <string name="label_soon">जल्द आ रहा है</string>
+    <string name="label_tuning_in_progress">ट्यूनिंग जारी है</string>
+
+    <string name="exercise_biceps_curl">बाइसेप कर्ल</string>
+    <string name="exercise_hammer_curl">हैमर कर्ल</string>
+    <string name="exercise_lateral_raise">लेटरल रेज़</string>
+    <string name="exercise_front_raise">फ्रंट रेज़</string>
+    <string name="exercise_shoulder_press">शोल्डर प्रेस</string>
+    <string name="exercise_triceps_extension">ट्राइसेप एक्सटेंशन</string>
+    <string name="exercise_dumbbell_row">डम्बल रो</string>
+    <string name="exercise_dumbbell_chest_press">डम्बल चेस्ट प्रेस</string>
+</resources>
