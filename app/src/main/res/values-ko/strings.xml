@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">무제한 운동</string>
     <string name="keep_history">기록 보관</string>
     <string name="no_trial_limits">체험 제한 없음</string>
-    <string name="no_subscription_price">구독 없음 • $9.99</string>
+    <string name="no_subscription">구독 없음 • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">최적화됨</string>
     <string name="label_best_tracking_quality">최고 추적 품질</string>

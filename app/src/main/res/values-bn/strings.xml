@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">সীমাহীন ওয়ার্কআউট</string>
     <string name="keep_history">ইতিহাস সংরক্ষণ করুন</string>
     <string name="no_trial_limits">ট্রায়ালের কোনো সীমা নেই</string>
-    <string name="no_subscription_price">কোনো সাবস্ক্রিপশন নেই • $9.99</string>
+    <string name="no_subscription">কোনো সাবস্ক্রিপশন নেই • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">অপ্টিমাইজড</string>
     <string name="label_best_tracking_quality">সর্বোত্তম ট্র্যাকিং মান</string>

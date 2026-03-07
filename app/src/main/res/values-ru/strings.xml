@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Безлимитные тренировки</string>
     <string name="keep_history">Сохраняйте историю</string>
     <string name="no_trial_limits">Без лимитов пробного доступа</string>
-    <string name="no_subscription_price">Без подписки • $9.99</string>
+    <string name="no_subscription">Без подписки • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Оптимизировано</string>
     <string name="label_best_tracking_quality">Лучшее качество отслеживания</string>

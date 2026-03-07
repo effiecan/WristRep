@@ -4,6 +4,7 @@ data class BillingAvailabilityState(
     val isBillingReady: Boolean = false,
     val isProductAvailable: Boolean = false,
     val isPurchaseInProgress: Boolean = false,
+    val formattedPrice: String? = null,
 )
 
 enum class BillingEntitlementStatus {

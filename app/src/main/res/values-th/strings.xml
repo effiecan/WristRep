@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">ออกกำลังกายไม่จำกัด</string>
     <string name="keep_history">เก็บประวัติไว้</string>
     <string name="no_trial_limits">ไม่มีข้อจำกัดการทดลองใช้</string>
-    <string name="no_subscription_price">ไม่มีสมาชิก • $9.99</string>
+    <string name="no_subscription">ไม่มีสมาชิก • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">ปรับให้เหมาะสม</string>
     <string name="label_best_tracking_quality">คุณภาพการติดตามดีที่สุด</string>

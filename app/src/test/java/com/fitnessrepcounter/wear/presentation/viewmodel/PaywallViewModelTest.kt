@@ -30,6 +30,7 @@ class PaywallViewModelTest {
             initialBillingState = BillingAvailabilityState(
                 isBillingReady = true,
                 isProductAvailable = true,
+                formattedPrice = "$9.99",
             ),
         )
         val viewModel = PaywallViewModel(
@@ -41,6 +42,7 @@ class PaywallViewModelTest {
 
         assertThat(entitlementRepository.syncCallCount).isEqualTo(1)
         assertThat(viewModel.uiState.value.canUnlockPro).isTrue()
+        assertThat(viewModel.uiState.value.formattedPrice).isEqualTo("$9.99")
     }
 
     @Test
@@ -61,6 +63,7 @@ class PaywallViewModelTest {
 
         assertThat(viewModel.uiState.value.canUnlockPro).isFalse()
         assertThat(viewModel.uiState.value.isBillingReady).isTrue()
+        assertThat(viewModel.uiState.value.formattedPrice).isNull()
     }
 }
 

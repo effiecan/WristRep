@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Ubegrænsede træninger</string>
     <string name="keep_history">Behold historik</string>
     <string name="no_trial_limits">Ingen prøvebegrænsninger</string>
-    <string name="no_subscription_price">Intet abonnement • $9.99</string>
+    <string name="no_subscription">Intet abonnement • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Optimeret</string>
     <string name="label_best_tracking_quality">Bedste sporingskvalitet</string>

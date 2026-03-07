@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Buổi tập không giới hạn</string>
     <string name="keep_history">Giữ lịch sử</string>
     <string name="no_trial_limits">Không giới hạn dùng thử</string>
-    <string name="no_subscription_price">Không đăng ký • $9.99</string>
+    <string name="no_subscription">Không đăng ký • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Tối ưu hóa</string>
     <string name="label_best_tracking_quality">Chất lượng theo dõi tốt nhất</string>

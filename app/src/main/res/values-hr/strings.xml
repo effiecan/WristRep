@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Neograničeni treninzi</string>
     <string name="keep_history">Sačuvaj povijest</string>
     <string name="no_trial_limits">Bez ograničenja probne verzije</string>
-    <string name="no_subscription_price">Bez pretplate • $9.99</string>
+    <string name="no_subscription">Bez pretplate • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Optimizirano</string>
     <string name="label_best_tracking_quality">Najbolja kvaliteta praćenja</string>

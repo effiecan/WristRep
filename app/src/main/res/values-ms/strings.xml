@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Senaman tanpa had</string>
     <string name="keep_history">Simpan sejarah</string>
     <string name="no_trial_limits">Tiada had percubaan</string>
-    <string name="no_subscription_price">Tiada langganan • $9.99</string>
+    <string name="no_subscription">Tiada langganan • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Dioptimumkan</string>
     <string name="label_best_tracking_quality">Kualiti penjejakan terbaik</string>

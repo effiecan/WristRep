@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Obegränsade träningspass</string>
     <string name="keep_history">Behåll historik</string>
     <string name="no_trial_limits">Inga testbegränsningar</string>
-    <string name="no_subscription_price">Ingen prenumeration • $9.99</string>
+    <string name="no_subscription">Ingen prenumeration • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Optimerad</string>
     <string name="label_best_tracking_quality">Bästa spårningskvalitet</string>

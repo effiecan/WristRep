@@ -7,6 +7,7 @@ data class PaywallUiState(
     val isBillingReady: Boolean = false,
     val isProductAvailable: Boolean = false,
     val isPurchaseInProgress: Boolean = false,
+    val formattedPrice: String? = null,
 ) {
     val canUnlockPro: Boolean = isBillingReady &&
         isProductAvailable &&

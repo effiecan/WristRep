@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Antrenamente nelimitate</string>
     <string name="keep_history">Păstrează istoricul</string>
     <string name="no_trial_limits">Fără limite de probă</string>
-    <string name="no_subscription_price">Fără abonament • $9.99</string>
+    <string name="no_subscription">Fără abonament • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Optimizat</string>
     <string name="label_best_tracking_quality">Cea mai bună calitate de urmărire</string>

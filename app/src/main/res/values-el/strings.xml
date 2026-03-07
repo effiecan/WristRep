@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Απεριόριστες προπονήσεις</string>
     <string name="keep_history">Διατήρησε το ιστορικό</string>
     <string name="no_trial_limits">Χωρίς όρια δοκιμής</string>
-    <string name="no_subscription_price">Χωρίς συνδρομή • $9.99</string>
+    <string name="no_subscription">Χωρίς συνδρομή • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Βελτιστοποιημένο</string>
     <string name="label_best_tracking_quality">Καλύτερη ποιότητα παρακολούθησης</string>

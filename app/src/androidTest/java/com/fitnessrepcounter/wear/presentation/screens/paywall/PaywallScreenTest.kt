@@ -32,6 +32,7 @@ class PaywallScreenTest {
                     uiState = PaywallUiState(
                         isBillingReady = true,
                         isProductAvailable = true,
+                        formattedPrice = "$14.99",
                     ),
                     onUnlockClick = {},
                     onBack = {},
@@ -46,8 +47,23 @@ class PaywallScreenTest {
         composeTestRule.onNodeWithText(context.getString(R.string.no_trial_limits)).assertIsDisplayed()
         composeTestRule.onNodeWithTag("paywall_unlock_button").assertIsDisplayed().assertIsEnabled()
         composeTestRule.onNodeWithTag("paywall_reassurance").assertIsDisplayed()
-        composeTestRule.onNodeWithText(context.getString(R.string.no_subscription_price)).assertIsDisplayed()
+        composeTestRule.onNodeWithText(context.getString(R.string.no_subscription_price, "$14.99")).assertIsDisplayed()
         composeTestRule.onAllNodesWithText("Train without limits on this watch.").assertCountEquals(0)
         composeTestRule.onAllNodesWithText(context.getString(R.string.back)).assertCountEquals(0)
+    }
+
+    @Test
+    fun paywallScreen_showsFallbackReassurance_whenPriceIsUnavailable() {
+        composeTestRule.setContent {
+            FitnessRepCounterTheme {
+                PaywallScreen(
+                    uiState = PaywallUiState(),
+                    onUnlockClick = {},
+                    onBack = {},
+                )
+            }
+        }
+
+        composeTestRule.onNodeWithText(context.getString(R.string.no_subscription)).assertIsDisplayed()
     }
 }

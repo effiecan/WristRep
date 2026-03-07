@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Walang limitasyong workout</string>
     <string name="keep_history">Panatilihin ang kasaysayan</string>
     <string name="no_trial_limits">Walang limit sa trial</string>
-    <string name="no_subscription_price">Walang subscription • $9.99</string>
+    <string name="no_subscription">Walang subscription • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Na-optimize</string>
     <string name="label_best_tracking_quality">Pinakamagandang kalidad ng pagsubaybay</string>

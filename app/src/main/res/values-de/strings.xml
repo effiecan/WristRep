@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Unbegrenzte Trainings</string>
     <string name="keep_history">Verlauf behalten</string>
     <string name="no_trial_limits">Keine Testlimits</string>
-    <string name="no_subscription_price">Kein Abo • 9,99 $</string>
+    <string name="no_subscription">Kein Abo • 9,99 $</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Optimiert</string>
     <string name="label_best_tracking_quality">Beste Tracking-Qualität</string>

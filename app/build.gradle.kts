@@ -10,16 +10,19 @@ android {
 
     defaultConfig {
         applicationId = "com.fitnessrepcounter.wear"
-        minSdk = 30
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = 26
+        targetSdk = 36
+        versionCode = 5
+        versionName = "0.9"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            ndk {
+                debugSymbolLevel = "SYMBOL_TABLE"
+            }
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",

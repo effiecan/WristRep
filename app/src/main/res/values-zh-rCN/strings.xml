@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">无限训练</string>
     <string name="keep_history">保留历史记录</string>
     <string name="no_trial_limits">没有试用限制</string>
-    <string name="no_subscription_price">无订阅 • $9.99</string>
+    <string name="no_subscription">无订阅 • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">已优化</string>
     <string name="label_best_tracking_quality">最佳追踪质量</string>

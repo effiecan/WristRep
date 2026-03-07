@@ -12,15 +12,12 @@ import com.google.common.truth.Truth.assertThat
 import java.io.File
 import kotlin.io.path.createTempDirectory
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
-import kotlinx.coroutines.withContext
-import kotlinx.coroutines.withTimeout
 import org.junit.Test
 
 @OptIn(ExperimentalCoroutinesApi::class)
@@ -110,11 +107,7 @@ class EntitlementRepositoryImplTest {
 
         billingClient.entitlementStatusFlow.value = BillingEntitlementStatus.OWNED
         advanceUntilIdle()
-        val state = withContext(Dispatchers.Default.limitedParallelism(1)) {
-            withTimeout(5_000L) {
-                repository.observeEntitlement().first { it.isProUnlocked }
-            }
-        }
+        val state = repository.observeEntitlement().first { it.isProUnlocked }
         assertThat(state.isProUnlocked).isTrue()
     }
 
@@ -146,7 +139,7 @@ class EntitlementRepositoryImplTest {
     ): EntitlementRepositoryImpl {
         val file = File(createTempDirectory().toFile(), "entitlement.preferences_pb")
         val dataStore = PreferenceDataStoreFactory.create(
-            scope = kotlinx.coroutines.CoroutineScope(kotlinx.coroutines.Dispatchers.IO),
+            scope = scope,
             produceFile = { file },
         )
         return EntitlementRepositoryImpl(

@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Latihan tanpa batas</string>
     <string name="keep_history">Simpan riwayat</string>
     <string name="no_trial_limits">Tanpa batas uji coba</string>
-    <string name="no_subscription_price">Tanpa langganan â€¢ $9.99</string>
+    <string name="no_subscription">Tanpa langganan â€¢ $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Dioptimalkan</string>
     <string name="label_best_tracking_quality">Kualitas pelacakan terbaik</string>

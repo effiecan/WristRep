@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Onbeperkte workouts</string>
     <string name="keep_history">Geschiedenis bewaren</string>
     <string name="no_trial_limits">Geen proeflimieten</string>
-    <string name="no_subscription_price">Geen abonnement • $9.99</string>
+    <string name="no_subscription">Geen abonnement • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Geoptimaliseerd</string>
     <string name="label_best_tracking_quality">Beste trackingkwaliteit</string>

@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Entrenaments il·limitats</string>
     <string name="keep_history">Conserva l’historial</string>
     <string name="no_trial_limits">Sense límits de prova</string>
-    <string name="no_subscription_price">Sense subscripció • $9.99</string>
+    <string name="no_subscription">Sense subscripció • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Optimitzat</string>
     <string name="label_best_tracking_quality">Millor qualitat de seguiment</string>

@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">تمارين غير محدودة</string>
     <string name="keep_history">احتفظ بالسجل</string>
     <string name="no_trial_limits">بدون حدود للتجربة</string>
-    <string name="no_subscription_price">بدون اشتراك • $9.99</string>
+    <string name="no_subscription">بدون اشتراك • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">محسّن</string>
     <string name="label_best_tracking_quality">أفضل جودة تتبع</string>

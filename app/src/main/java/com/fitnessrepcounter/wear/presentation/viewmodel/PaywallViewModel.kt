@@ -32,6 +32,7 @@ class PaywallViewModel(
                         isBillingReady = billing.isBillingReady,
                         isProductAvailable = billing.isProductAvailable,
                         isPurchaseInProgress = billing.isPurchaseInProgress,
+                        formattedPrice = billing.formattedPrice,
                     )
                 }
                 .collect { state ->

@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Korlátlan edzések</string>
     <string name="keep_history">Előzmények megőrzése</string>
     <string name="no_trial_limits">Nincs próbakorlát</string>
-    <string name="no_subscription_price">Nincs előfizetés • $9.99</string>
+    <string name="no_subscription">Nincs előfizetés • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Optimalizált</string>
     <string name="label_best_tracking_quality">Legjobb követési minőség</string>

@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Entraînements illimités</string>
     <string name="keep_history">Conserver l’historique</string>
     <string name="no_trial_limits">Aucune limite d’essai</string>
-    <string name="no_subscription_price">Sans abonnement • 9,99 $</string>
+    <string name="no_subscription">Sans abonnement • 9,99 $</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Optimisé</string>
     <string name="label_best_tracking_quality">Meilleure qualité de suivi</string>

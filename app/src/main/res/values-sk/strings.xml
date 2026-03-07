@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">Neobmedzené tréningy</string>
     <string name="keep_history">Zachovať históriu</string>
     <string name="no_trial_limits">Bez limitov skúšobnej verzie</string>
-    <string name="no_subscription_price">Bez predplatného • $9.99</string>
+    <string name="no_subscription">Bez predplatného • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">Optimalizované</string>
     <string name="label_best_tracking_quality">Najlepšia kvalita sledovania</string>

@@ -61,6 +61,7 @@ class GooglePlayBillingClient(
             state.copy(
                 isBillingReady = true,
                 isProductAvailable = productDetails != null,
+                formattedPrice = productDetails?.oneTimePurchaseOfferDetails?.formattedPrice,
             )
         }
         refreshPurchases()
@@ -78,6 +79,7 @@ class GooglePlayBillingClient(
                 isBillingReady = true,
                 isProductAvailable = true,
                 isPurchaseInProgress = true,
+                formattedPrice = details.oneTimePurchaseOfferDetails?.formattedPrice,
             )
         }
 
@@ -222,6 +224,7 @@ class GooglePlayBillingClient(
                 isBillingReady = true,
                 isProductAvailable = productDetails != null,
                 isPurchaseInProgress = false,
+                formattedPrice = productDetails?.oneTimePurchaseOfferDetails?.formattedPrice,
             )
         }
     }
@@ -309,6 +312,6 @@ class GooglePlayBillingClient(
     )
 
     companion object {
-        const val PRO_PRODUCT_ID: String = "wristrep_pro_unlock"
+        const val PRO_PRODUCT_ID: String = "wristrep_pro"
     }
 }

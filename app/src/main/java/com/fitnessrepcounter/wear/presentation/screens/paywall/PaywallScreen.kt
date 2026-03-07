@@ -81,7 +81,9 @@ fun PaywallScreen(
         )
         Spacer(modifier = Modifier.height(6.dp))
         Text(
-            text = stringResource(R.string.no_subscription_price),
+            text = uiState.formattedPrice?.let { price ->
+                stringResource(R.string.no_subscription_price, price)
+            } ?: stringResource(R.string.no_subscription),
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 8.dp)

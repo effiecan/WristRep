@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">असीमित वर्कआउट</string>
     <string name="keep_history">इतिहास सुरक्षित रखें</string>
     <string name="no_trial_limits">ट्रायल की कोई सीमा नहीं</string>
-    <string name="no_subscription_price">कोई सब्सक्रिप्शन नहीं • $9.99</string>
+    <string name="no_subscription">कोई सब्सक्रिप्शन नहीं • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">ऑप्टिमाइज़्ड</string>
     <string name="label_best_tracking_quality">सबसे अच्छी ट्रैकिंग क्वालिटी</string>

@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">無制限のワークアウト</string>
     <string name="keep_history">履歴を保存</string>
     <string name="no_trial_limits">体験版の制限なし</string>
-    <string name="no_subscription_price">サブスクなし • $9.99</string>
+    <string name="no_subscription">サブスクなし • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">最適化済み</string>
     <string name="label_best_tracking_quality">最高の追跡品質</string>

@@ -38,7 +38,8 @@
     <string name="unlimited_workouts">Unlimited workouts</string>
     <string name="keep_history">Keep history</string>
     <string name="no_trial_limits">No trial limits</string>
-    <string name="no_subscription_price">No subscription &#8226; $9.99</string>
+    <string name="no_subscription">No subscription</string>
+    <string name="no_subscription_price">No subscription &#8226; %1$s</string>
     <string name="label_optimized">Optimized</string>
     <string name="label_best_tracking_quality">Best tracking quality</string>
     <string name="label_experimental">Experimental</string>

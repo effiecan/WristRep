@@ -38,7 +38,8 @@
     <string name="unlimited_workouts">Sınırsız antrenman</string>
     <string name="keep_history">Geçmişi sakla</string>
     <string name="no_trial_limits">Deneme sınırı yok</string>
-    <string name="no_subscription_price">Abonelik yok &#8226; $9.99</string>
+    <string name="no_subscription">Abonelik yok</string>
+    <string name="no_subscription_price">Abonelik yok &#8226; %1$s</string>
     <string name="label_optimized">Optimize edildi</string>
     <string name="label_best_tracking_quality">En iyi takip kalitesi</string>
     <string name="label_experimental">Deneysel</string>

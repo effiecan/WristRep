@@ -39,7 +39,8 @@
     <string name="unlimited_workouts">வரம்பற்ற பயிற்சிகள்</string>
     <string name="keep_history">வரலாற்றை வைத்திருங்கள்</string>
     <string name="no_trial_limits">சோதனைக்கு வரம்பில்லை</string>
-    <string name="no_subscription_price">சந்தா இல்லை • $9.99</string>
+    <string name="no_subscription">சந்தா இல்லை • $9.99</string>
+    <string name="no_subscription_price">%1$s</string>
 
     <string name="label_optimized">மேம்படுத்தப்பட்டது</string>
     <string name="label_best_tracking_quality">சிறந்த கண்காணிப்பு தரம்</string>
