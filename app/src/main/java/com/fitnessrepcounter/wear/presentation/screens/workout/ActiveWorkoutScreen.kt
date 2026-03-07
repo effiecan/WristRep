@@ -107,12 +107,13 @@ fun ActiveWorkoutScreen(
                         size = 40.dp,
                     )
                     PrimaryActionButton(
-                        text = stringResource(R.string.end_set),
+                        text = stringResource(R.string.watch_cta_end_set),
                         onClick = onEndSet,
                         modifier = Modifier
                             .weight(1f)
                             .testTag("end_set_button"),
                         height = 34.dp,
+                        maxLines = 2,
                     )
                     CorrectionControlButton(
                         label = stringResource(R.string.rep_adjust_plus_one),

@@ -1,60 +1,7 @@
 <resources>
-    <string name="app_name">WristRep</string>
-
-    <string name="pro_unlocked">Pro débloqué</string>
-    <string name="free_workouts_left">%1$d gratuits restants</string>
-    <string name="trial_used">Essai utilisé</string>
-    <string name="start_workout">Commencer l’entraînement</string>
-    <string name="history">Historique</string>
-    <string name="exercises">Exercices</string>
-    <string name="back">Retour</string>
-    <string name="go">Commencer</string>
-    <string name="get_ready">Prépare-toi</string>
-    <string name="starting_now">Commence maintenant</string>
-    <string name="workout">Entraînement</string>
-    <string name="set_number">Série %1$d</string>
-    <string name="end_set">Terminer la série</string>
-    <string name="rep_adjust_minus_one">-1</string>
-    <string name="rep_adjust_plus_one">+1</string>
-    <string name="status_ready">Prêt</string>
-    <string name="status_tracking">Suivi en cours</string>
-    <string name="status_rep_detected">Répétition détectée</string>
-    <string name="status_paused">En pause</string>
-    <string name="set_complete">Série terminée</string>
-    <string name="reps_logged">Répétitions enregistrées</string>
-    <string name="rest">Repos</string>
-    <string name="finish_workout">Terminer l’entraînement</string>
-    <string name="seconds_left">Secondes restantes</string>
-    <string name="skip">Passer</string>
-    <string name="summary">Résumé</string>
-    <string name="workout_total">Total de l’entraînement</string>
-    <string name="reps">rép.</string>
-    <string name="manual_edits_count">Corrections manuelles %1$d</string>
-    <string name="save">Enregistrer</string>
-    <string name="discard">Ignorer</string>
-    <string name="no_workouts_yet">Aucun entraînement pour l’instant</string>
-    <string name="completed_sessions_will_appear_here">Les séances terminées apparaîtront ici.</string>
-    <string name="unlock_pro">Débloquer Pro</string>
-    <string name="pay_once">Payer une fois</string>
-    <string name="unlimited_workouts">Entraînements illimités</string>
-    <string name="keep_history">Conserver l’historique</string>
-    <string name="no_trial_limits">Aucune limite d’essai</string>
-    <string name="no_subscription">Sans abonnement • 9,99 $</string>
-    <string name="no_subscription_price">%1$s</string>
-
-    <string name="label_optimized">Optimisé</string>
-    <string name="label_best_tracking_quality">Meilleure qualité de suivi</string>
-    <string name="label_experimental">Expérimental</string>
-    <string name="label_manual_correction_may_help">La correction manuelle peut aider</string>
-    <string name="label_soon">Bientôt</string>
-    <string name="label_tuning_in_progress">Réglage en cours</string>
-
-    <string name="exercise_biceps_curl">Curl biceps</string>
-    <string name="exercise_hammer_curl">Curl marteau</string>
-    <string name="exercise_lateral_raise">Élévation latérale</string>
-    <string name="exercise_front_raise">Élévation frontale</string>
-    <string name="exercise_shoulder_press">Développé épaules</string>
-    <string name="exercise_triceps_extension">Extension triceps</string>
-    <string name="exercise_dumbbell_row">Rowing haltères</string>
-    <string name="exercise_dumbbell_chest_press">Développé couché haltères</string>
+    <string name="watch_cta_end_set">Finir</string>
+    <string name="watch_cta_rest">Pause</string>
+    <string name="watch_cta_finish_workout">Terminer</string>
+    <string name="watch_cta_save">Enregistrer</string>
+    <string name="watch_cta_discard">Effacer</string>
 </resources>

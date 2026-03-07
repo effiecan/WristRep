@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
@@ -22,16 +23,23 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.wear.compose.material.Button
 import androidx.wear.compose.material.ButtonDefaults
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Scaffold
 import androidx.wear.compose.material.Text
 import androidx.wear.compose.material.TimeText
+import androidx.compose.runtime.remember
+import androidx.compose.ui.text.rememberTextMeasurer
 import com.fitnessrepcounter.wear.ui.theme.WatchAccentSoft
 import com.fitnessrepcounter.wear.ui.theme.WatchBadgeMuted
 import com.fitnessrepcounter.wear.ui.theme.WatchBlack
@@ -92,6 +100,7 @@ fun PrimaryActionButton(
     modifier: Modifier = Modifier.fillMaxWidth(),
     enabled: Boolean = true,
     height: Dp = 44.dp,
+    maxLines: Int = 2,
 ) {
     Button(
         onClick = onClick,
@@ -104,7 +113,7 @@ fun PrimaryActionButton(
             disabledContentColor = MaterialTheme.colors.onPrimary.copy(alpha = 0.65f),
         ),
     ) {
-        Text(text = text, fontWeight = FontWeight.SemiBold)
+        AdaptiveButtonLabel(text = text, fontWeight = FontWeight.SemiBold, maxLines = maxLines)
     }
 }
 
@@ -115,6 +124,7 @@ fun SecondaryActionButton(
     modifier: Modifier = Modifier.fillMaxWidth(),
     enabled: Boolean = true,
     height: Dp = 40.dp,
+    maxLines: Int = 2,
 ) {
     Button(
         onClick = onClick,
@@ -127,7 +137,54 @@ fun SecondaryActionButton(
             disabledContentColor = MaterialTheme.colors.onSurface.copy(alpha = 0.45f),
         ),
     ) {
-        Text(text = text, fontWeight = FontWeight.Medium)
+        AdaptiveButtonLabel(text = text, fontWeight = FontWeight.Medium, maxLines = maxLines)
+    }
+}
+
+@Composable
+private fun AdaptiveButtonLabel(
+    text: String,
+    fontWeight: FontWeight,
+    maxLines: Int,
+) {
+    val textMeasurer = rememberTextMeasurer()
+    val density = LocalDensity.current
+    val candidateStyles = listOf(16.sp, 14.sp, 12.sp).map { size ->
+        MaterialTheme.typography.body1.copy(
+            fontSize = size,
+            fontWeight = fontWeight,
+        )
+    }
+
+    BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
+        val contentWidthPx = (with(density) { maxWidth.roundToPx() } - with(density) { 24.dp.roundToPx() })
+            .coerceAtLeast(1)
+        val selectedStyle = remember(text, fontWeight, maxLines, contentWidthPx, candidateStyles, textMeasurer) {
+            candidateStyles.firstOrNull { style ->
+                !textMeasurer.measure(
+                    text = AnnotatedString(text),
+                    style = style,
+                    maxLines = maxLines,
+                    overflow = TextOverflow.Ellipsis,
+                    constraints = Constraints(maxWidth = contentWidthPx),
+                ).hasVisualOverflow
+            } ?: candidateStyles.last()
+        }
+
+        Box(
+            modifier = Modifier.fillMaxWidth(),
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(
+                text = text,
+                modifier = Modifier.fillMaxWidth(),
+                style = selectedStyle,
+                fontWeight = fontWeight,
+                textAlign = TextAlign.Center,
+                maxLines = maxLines,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
     }
 }
 

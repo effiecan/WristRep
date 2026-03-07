@@ -13,6 +13,7 @@
     <string name="workout">Workout</string>
     <string name="set_number">Set %1$d</string>
     <string name="end_set">End Set</string>
+    <string name="watch_cta_end_set">Finish</string>
     <string name="rep_adjust_minus_one">-1</string>
     <string name="rep_adjust_plus_one">+1</string>
     <string name="status_ready">Ready</string>
@@ -22,7 +23,9 @@
     <string name="set_complete">Set complete</string>
     <string name="reps_logged">Reps logged</string>
     <string name="rest">Rest</string>
+    <string name="watch_cta_rest">Rest</string>
     <string name="finish_workout">Finish workout</string>
+    <string name="watch_cta_finish_workout">Finish</string>
     <string name="seconds_left">Seconds left</string>
     <string name="skip">Skip</string>
     <string name="summary">Summary</string>
@@ -30,7 +33,9 @@
     <string name="reps">reps</string>
     <string name="manual_edits_count">Manual edits %1$d</string>
     <string name="save">Save</string>
+    <string name="watch_cta_save">Save</string>
     <string name="discard">Discard</string>
+    <string name="watch_cta_discard">Discard</string>
     <string name="no_workouts_yet">No workouts yet</string>
     <string name="completed_sessions_will_appear_here">Completed sessions will appear here.</string>
     <string name="unlock_pro">Unlock Pro</string>

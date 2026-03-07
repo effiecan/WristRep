@@ -2,6 +2,7 @@ package com.fitnessrepcounter.wear.presentation.screens.workout
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -35,11 +36,20 @@ fun EndSetConfirmationScreen(
             label = stringResource(R.string.reps_logged),
         )
         Spacer(modifier = Modifier.weight(1f))
-        PrimaryActionButton(text = stringResource(R.string.rest), onClick = onRestClick)
+        PrimaryActionButton(
+            text = stringResource(R.string.watch_cta_rest),
+            onClick = onRestClick,
+            modifier = Modifier.fillMaxWidth(0.72f),
+            height = 36.dp,
+            maxLines = 2,
+        )
         Spacer(modifier = Modifier.height(8.dp))
         SecondaryActionButton(
-            text = stringResource(R.string.finish_workout),
+            text = stringResource(R.string.watch_cta_finish_workout),
             onClick = onFinishWorkout,
+            modifier = Modifier.fillMaxWidth(0.68f),
+            height = 34.dp,
+            maxLines = 2,
         )
     }
 }

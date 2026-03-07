@@ -59,14 +59,20 @@ fun WorkoutSummaryScreen(
         }
         Spacer(modifier = Modifier.height(10.dp))
         PrimaryActionButton(
-            text = stringResource(R.string.save),
+            text = stringResource(R.string.watch_cta_save),
             onClick = onSave,
             enabled = uiState.canSave,
+            modifier = Modifier.fillMaxWidth(0.7f),
+            height = 36.dp,
+            maxLines = 2,
         )
         Spacer(modifier = Modifier.height(8.dp))
         SecondaryActionButton(
-            text = stringResource(R.string.discard),
+            text = stringResource(R.string.watch_cta_discard),
             onClick = onDiscard,
+            modifier = Modifier.fillMaxWidth(0.68f),
+            height = 34.dp,
+            maxLines = 2,
         )
     }
 }

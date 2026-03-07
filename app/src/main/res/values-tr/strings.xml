@@ -13,6 +13,7 @@
     <string name="workout">Antrenman</string>
     <string name="set_number">Set %1$d</string>
     <string name="end_set">Seti bitir</string>
+    <string name="watch_cta_end_set">Bitir</string>
     <string name="rep_adjust_minus_one">-1</string>
     <string name="rep_adjust_plus_one">+1</string>
     <string name="status_ready">Hazır</string>
@@ -22,7 +23,9 @@
     <string name="set_complete">Set tamamlandı</string>
     <string name="reps_logged">Tekrarlar kaydedildi</string>
     <string name="rest">Dinlen</string>
+    <string name="watch_cta_rest">Dinlen</string>
     <string name="finish_workout">Antrenmanı bitir</string>
+    <string name="watch_cta_finish_workout">Bitir</string>
     <string name="seconds_left">Kalan saniye</string>
     <string name="skip">Geç</string>
     <string name="summary">Özet</string>
@@ -30,7 +33,9 @@
     <string name="reps">tekrar</string>
     <string name="manual_edits_count">Manuel düzeltme %1$d</string>
     <string name="save">Kaydet</string>
+    <string name="watch_cta_save">Kaydet</string>
     <string name="discard">Vazgeç</string>
+    <string name="watch_cta_discard">Sil</string>
     <string name="no_workouts_yet">Henüz antrenman yok</string>
     <string name="completed_sessions_will_appear_here">Tamamlanan antrenmanlar burada görünecek.</string>
     <string name="unlock_pro">Pro kilidini aç</string>

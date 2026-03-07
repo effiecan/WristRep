@@ -49,6 +49,7 @@ class ActiveWorkoutScreenTest {
         composeTestRule.onNodeWithTag("active_workout_actions").assertIsDisplayed()
         composeTestRule.onNodeWithText(context.getString(R.string.rep_adjust_minus_one)).assertIsDisplayed()
         composeTestRule.onNodeWithTag("end_set_button").assertIsDisplayed().assertIsEnabled()
+        composeTestRule.onNodeWithText(context.getString(R.string.watch_cta_end_set)).assertIsDisplayed()
         composeTestRule.onNodeWithText(context.getString(R.string.rep_adjust_plus_one)).assertIsDisplayed()
         composeTestRule.onAllNodesWithText(context.getString(R.string.label_experimental)).assertCountEquals(0)
         composeTestRule.onAllNodesWithText("Manual correction stays available.").assertCountEquals(0)
