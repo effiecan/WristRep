@@ -1,0 +1,64 @@
+com.fitnessrepcounter.wear.app-ui-text-release-0 /Users/ogur/.gradle/caches/transforms-4/03cdba754f74777a84b27029ffcbe10d/transformed/ui-text-release/res
+com.fitnessrepcounter.wear.app-animation-core-release-1 /Users/ogur/.gradle/caches/transforms-4/083d183c53d6a63c298cdb5210ea808e/transformed/animation-core-release/res
+com.fitnessrepcounter.wear.app-ui-unit-release-2 /Users/ogur/.gradle/caches/transforms-4/0c1aa5a98cbaa1eef6a77049eb2a010a/transformed/ui-unit-release/res
+com.fitnessrepcounter.wear.app-activity-ktx-1.9.0-3 /Users/ogur/.gradle/caches/transforms-4/1580f9556b4554369b8b66652bcb5397/transformed/activity-ktx-1.9.0/res
+com.fitnessrepcounter.wear.app-compose-material-1.4.0-4 /Users/ogur/.gradle/caches/transforms-4/162974406a54091834676f1c594cac68/transformed/compose-material-1.4.0/res
+com.fitnessrepcounter.wear.app-profileinstaller-1.3.1-5 /Users/ogur/.gradle/caches/transforms-4/16e301cf918698b0162b7c845acd09ac/transformed/profileinstaller-1.3.1/res
+com.fitnessrepcounter.wear.app-lifecycle-livedata-core-2.8.3-6 /Users/ogur/.gradle/caches/transforms-4/1af111158b7dda98116671720bdf170d/transformed/lifecycle-livedata-core-2.8.3/res
+com.fitnessrepcounter.wear.app-navigation-compose-2.6.0-7 /Users/ogur/.gradle/caches/transforms-4/1afe09378fde373eac1d178fbf3528dc/transformed/navigation-compose-2.6.0/res
+com.fitnessrepcounter.wear.app-foundation-release-8 /Users/ogur/.gradle/caches/transforms-4/2227ed9482d91797ab02e81b0104a202/transformed/foundation-release/res
+com.fitnessrepcounter.wear.app-activity-compose-1.9.0-9 /Users/ogur/.gradle/caches/transforms-4/274e3e9d36de99cd6d24741926d80cfe/transformed/activity-compose-1.9.0/res
+com.fitnessrepcounter.wear.app-material-icons-core-release-10 /Users/ogur/.gradle/caches/transforms-4/29fc599c4dbb0fdf57f36dd13ac5b000/transformed/material-icons-core-release/res
+com.fitnessrepcounter.wear.app-lifecycle-viewmodel-savedstate-2.8.3-11 /Users/ogur/.gradle/caches/transforms-4/2e975495399c07ef87879916e672fdb3/transformed/lifecycle-viewmodel-savedstate-2.8.3/res
+com.fitnessrepcounter.wear.app-runtime-release-12 /Users/ogur/.gradle/caches/transforms-4/3262d238733e8d9171cf284408289631/transformed/runtime-release/res
+com.fitnessrepcounter.wear.app-ui-graphics-release-13 /Users/ogur/.gradle/caches/transforms-4/344bda1c09020f89c12794ba78d5e3f2/transformed/ui-graphics-release/res
+com.fitnessrepcounter.wear.app-room-runtime-2.6.1-14 /Users/ogur/.gradle/caches/transforms-4/3491be084682f777f2359a2bc8e00d91/transformed/room-runtime-2.6.1/res
+com.fitnessrepcounter.wear.app-core-runtime-2.2.0-15 /Users/ogur/.gradle/caches/transforms-4/3b4cbc485de508abdcc6b67de782fc42/transformed/core-runtime-2.2.0/res
+com.fitnessrepcounter.wear.app-compose-navigation-1.4.0-16 /Users/ogur/.gradle/caches/transforms-4/41fd34d185862f1281896816157d6eb3/transformed/compose-navigation-1.4.0/res
+com.fitnessrepcounter.wear.app-ui-util-release-17 /Users/ogur/.gradle/caches/transforms-4/449cda6a1aaad7f22bf0ce875a0e91bd/transformed/ui-util-release/res
+com.fitnessrepcounter.wear.app-ui-geometry-release-18 /Users/ogur/.gradle/caches/transforms-4/453b41c53483bcfc74edf0929123597e/transformed/ui-geometry-release/res
+com.fitnessrepcounter.wear.app-material-ripple-release-19 /Users/ogur/.gradle/caches/transforms-4/47c1144b06ba125657d452526e922dd2/transformed/material-ripple-release/res
+com.fitnessrepcounter.wear.app-room-ktx-2.6.1-20 /Users/ogur/.gradle/caches/transforms-4/4846b42d71b9682bc33dd8f717247987/transformed/room-ktx-2.6.1/res
+com.fitnessrepcounter.wear.app-lifecycle-runtime-release-21 /Users/ogur/.gradle/caches/transforms-4/4a1210ee5ddb1df819dd43ade6f0405e/transformed/lifecycle-runtime-release/res
+com.fitnessrepcounter.wear.app-ui-tooling-release-22 /Users/ogur/.gradle/caches/transforms-4/4c2f8272c0e9087c3c08372e349e47c4/transformed/ui-tooling-release/res
+com.fitnessrepcounter.wear.app-lifecycle-process-2.8.3-23 /Users/ogur/.gradle/caches/transforms-4/50ba40da872de5d60c6c2a68faf5ccc6/transformed/lifecycle-process-2.8.3/res
+com.fitnessrepcounter.wear.app-savedstate-ktx-1.2.1-24 /Users/ogur/.gradle/caches/transforms-4/5679e22aad5f3ef3b1890e7aa9fc4ab9/transformed/savedstate-ktx-1.2.1/res
+com.fitnessrepcounter.wear.app-lifecycle-viewmodel-release-25 /Users/ogur/.gradle/caches/transforms-4/619cc442efb5a86aa970220461d0d92e/transformed/lifecycle-viewmodel-release/res
+com.fitnessrepcounter.wear.app-graphics-path-1.0.1-26 /Users/ogur/.gradle/caches/transforms-4/6f2b331d6b895c648c0d44e750e802aa/transformed/graphics-path-1.0.1/res
+com.fitnessrepcounter.wear.app-material-release-27 /Users/ogur/.gradle/caches/transforms-4/714924bbc3c03606e1bf49ae068796a3/transformed/material-release/res
+com.fitnessrepcounter.wear.app-activity-1.9.0-28 /Users/ogur/.gradle/caches/transforms-4/71b537acfb41fca7398e9c17ffc01d30/transformed/activity-1.9.0/res
+com.fitnessrepcounter.wear.app-animation-release-29 /Users/ogur/.gradle/caches/transforms-4/71c27f239d325701f434a165ea0e8d7d/transformed/animation-release/res
+com.fitnessrepcounter.wear.app-navigation-runtime-2.6.0-30 /Users/ogur/.gradle/caches/transforms-4/72e5c46d46e42e00ff7198b0be3f0b91/transformed/navigation-runtime-2.6.0/res
+com.fitnessrepcounter.wear.app-ui-tooling-preview-release-31 /Users/ogur/.gradle/caches/transforms-4/7b6111782bd14ee9464a230e59bf266d/transformed/ui-tooling-preview-release/res
+com.fitnessrepcounter.wear.app-navigation-common-ktx-2.6.0-32 /Users/ogur/.gradle/caches/transforms-4/7c5e3c145e64ec61092061590ef329f1/transformed/navigation-common-ktx-2.6.0/res
+com.fitnessrepcounter.wear.app-emoji2-1.3.0-33 /Users/ogur/.gradle/caches/transforms-4/8d265db809aefe6ba535572b60a1cbcb/transformed/emoji2-1.3.0/res
+com.fitnessrepcounter.wear.app-compose-foundation-1.4.0-34 /Users/ogur/.gradle/caches/transforms-4/9a5f1ebd6a007bd4e806bf9f93806097/transformed/compose-foundation-1.4.0/res
+com.fitnessrepcounter.wear.app-sqlite-2.4.0-35 /Users/ogur/.gradle/caches/transforms-4/a2c1f44d85a58bea855e8e881fed3c91/transformed/sqlite-2.4.0/res
+com.fitnessrepcounter.wear.app-datastore-core-release-36 /Users/ogur/.gradle/caches/transforms-4/a8151909a7d4e73dfbeaecb9f24107ad/transformed/datastore-core-release/res
+com.fitnessrepcounter.wear.app-datastore-preferences-release-37 /Users/ogur/.gradle/caches/transforms-4/af0dc5ed33b88a96241237a56add9e24/transformed/datastore-preferences-release/res
+com.fitnessrepcounter.wear.app-lifecycle-runtime-compose-release-38 /Users/ogur/.gradle/caches/transforms-4/c27633e019af19dcb0d51f810b444e48/transformed/lifecycle-runtime-compose-release/res
+com.fitnessrepcounter.wear.app-ui-tooling-data-release-39 /Users/ogur/.gradle/caches/transforms-4/c37d0d953534e2289e6b2886adb5c2e6/transformed/ui-tooling-data-release/res
+com.fitnessrepcounter.wear.app-navigation-runtime-ktx-2.6.0-40 /Users/ogur/.gradle/caches/transforms-4/ca7a583f3a2d1a7cea996ef87abc4f67/transformed/navigation-runtime-ktx-2.6.0/res
+com.fitnessrepcounter.wear.app-sqlite-framework-2.4.0-41 /Users/ogur/.gradle/caches/transforms-4/cd4a2786e58cc42f09da01120e8ec02c/transformed/sqlite-framework-2.4.0/res
+com.fitnessrepcounter.wear.app-lifecycle-runtime-ktx-release-42 /Users/ogur/.gradle/caches/transforms-4/cdaa3f6d15db4e19264d5ac8b3e77202/transformed/lifecycle-runtime-ktx-release/res
+com.fitnessrepcounter.wear.app-ui-release-43 /Users/ogur/.gradle/caches/transforms-4/d02b1b74d5c3f7e3104e4fd338466128/transformed/ui-release/res
+com.fitnessrepcounter.wear.app-core-ktx-1.13.1-44 /Users/ogur/.gradle/caches/transforms-4/d33bee1637304cf060ddfc55a5600f8f/transformed/core-ktx-1.13.1/res
+com.fitnessrepcounter.wear.app-navigation-common-2.6.0-45 /Users/ogur/.gradle/caches/transforms-4/d3f5a35bc15a814fb855adb4cb3509c5/transformed/navigation-common-2.6.0/res
+com.fitnessrepcounter.wear.app-startup-runtime-1.1.1-46 /Users/ogur/.gradle/caches/transforms-4/d4dd02a3897b1441880b8fdd2da8ae00/transformed/startup-runtime-1.1.1/res
+com.fitnessrepcounter.wear.app-lifecycle-viewmodel-compose-release-47 /Users/ogur/.gradle/caches/transforms-4/d9de9fe29f2c6b595f3f0de2bbe0b6ee/transformed/lifecycle-viewmodel-compose-release/res
+com.fitnessrepcounter.wear.app-customview-poolingcontainer-1.0.0-48 /Users/ogur/.gradle/caches/transforms-4/dd42e38183cb7d9a90b69ba4cfad41b5/transformed/customview-poolingcontainer-1.0.0/res
+com.fitnessrepcounter.wear.app-runtime-saveable-release-49 /Users/ogur/.gradle/caches/transforms-4/e470e5377e97f8a01ed9f82fc67a67b1/transformed/runtime-saveable-release/res
+com.fitnessrepcounter.wear.app-core-1.13.1-50 /Users/ogur/.gradle/caches/transforms-4/e91d43edd169d12026c8450ba62b92db/transformed/core-1.13.1/res
+com.fitnessrepcounter.wear.app-foundation-layout-release-51 /Users/ogur/.gradle/caches/transforms-4/ec67b5414c4ceb52f90d56790c726adb/transformed/foundation-layout-release/res
+com.fitnessrepcounter.wear.app-annotation-experimental-1.4.0-52 /Users/ogur/.gradle/caches/transforms-4/efdcc402ed8e7fa891c97037c96eceec/transformed/annotation-experimental-1.4.0/res
+com.fitnessrepcounter.wear.app-savedstate-1.2.1-53 /Users/ogur/.gradle/caches/transforms-4/f0e8eaf470acca0415ef31a789577478/transformed/savedstate-1.2.1/res
+com.fitnessrepcounter.wear.app-compose-material-core-1.4.0-54 /Users/ogur/.gradle/caches/transforms-4/f2538b2e8fae63069de5b8a7991ab616/transformed/compose-material-core-1.4.0/res
+com.fitnessrepcounter.wear.app-datastore-release-55 /Users/ogur/.gradle/caches/transforms-4/f2cfdc39e62f3f122c52517a02dce5f3/transformed/datastore-release/res
+com.fitnessrepcounter.wear.app-lifecycle-viewmodel-ktx-2.8.3-56 /Users/ogur/.gradle/caches/transforms-4/fcf212d816b8e98ccec252565eb0db3e/transformed/lifecycle-viewmodel-ktx-2.8.3/res
+com.fitnessrepcounter.wear.app-pngs-57 /Volumes/KIOXIA/Proje Dosyaları/Fitness Rep Counter /app/build/generated/res/pngs/debug
+com.fitnessrepcounter.wear.app-resValues-58 /Volumes/KIOXIA/Proje Dosyaları/Fitness Rep Counter /app/build/generated/res/resValues/debug
+com.fitnessrepcounter.wear.app-packageDebugResources-59 /Volumes/KIOXIA/Proje Dosyaları/Fitness Rep Counter /app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.fitnessrepcounter.wear.app-packageDebugResources-60 /Volumes/KIOXIA/Proje Dosyaları/Fitness Rep Counter /app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.fitnessrepcounter.wear.app-debug-61 /Volumes/KIOXIA/Proje Dosyaları/Fitness Rep Counter /app/build/intermediates/merged_res/debug/mergeDebugResources
+com.fitnessrepcounter.wear.app-debug-62 /Volumes/KIOXIA/Proje Dosyaları/Fitness Rep Counter /app/src/debug/res
+com.fitnessrepcounter.wear.app-main-63 /Volumes/KIOXIA/Proje Dosyaları/Fitness Rep Counter /app/src/main/res

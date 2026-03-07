@@ -1,0 +1,175 @@
+package com.fitnessrepcounter.wear.presentation.screens.workout
+
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.unit.Constraints
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.wear.compose.material.MaterialTheme
+import androidx.wear.compose.material.Text
+import com.fitnessrepcounter.wear.domain.model.RepDetectionState
+import com.fitnessrepcounter.wear.presentation.components.BadgeTone
+import com.fitnessrepcounter.wear.presentation.components.CorrectionControlButton
+import com.fitnessrepcounter.wear.presentation.components.PrimaryActionButton
+import com.fitnessrepcounter.wear.presentation.components.StatusBadge
+import com.fitnessrepcounter.wear.presentation.components.WristRepScreenScaffold
+import com.fitnessrepcounter.wear.presentation.state.WorkoutUiState
+import com.fitnessrepcounter.wear.ui.theme.WatchTextSecondary
+
+@Composable
+fun ActiveWorkoutScreen(
+    uiState: WorkoutUiState,
+    onAddRep: () -> Unit,
+    onRemoveRep: () -> Unit,
+    onEndSet: () -> Unit,
+) {
+    val exercise = uiState.selectedExercise
+    val statusText = uiState.detectionState.toUserFacingStatus()
+
+    WristRepScreenScaffold(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Top,
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(bottom = 8.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Spacer(modifier = Modifier.height(8.dp))
+            AdaptiveExerciseTitle(
+                text = exercise?.displayName ?: "Workout",
+                modifier = Modifier
+                    .fillMaxWidth(0.76f)
+                    .widthIn(max = 128.dp)
+                    .testTag("active_workout_title"),
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = "Set ${uiState.currentSetNumber}",
+                style = MaterialTheme.typography.body2,
+                color = WatchTextSecondary,
+                fontWeight = FontWeight.SemiBold,
+            )
+            Spacer(modifier = Modifier.height(1.dp))
+            Text(
+                text = uiState.currentRepCount.toString(),
+                style = MaterialTheme.typography.display1,
+                color = MaterialTheme.colors.primary,
+            )
+            Spacer(modifier = Modifier.height(2.dp))
+            StatusBadge(
+                label = statusText,
+                tone = if (uiState.detectionState == RepDetectionState.PAUSED) BadgeTone.MUTED else BadgeTone.ACCENT,
+                modifier = Modifier.testTag("active_workout_status"),
+                horizontalPadding = 9.dp,
+                verticalPadding = 2.dp,
+            )
+            Spacer(modifier = Modifier.weight(1f))
+            Box(
+                modifier = Modifier.fillMaxWidth(),
+                contentAlignment = Alignment.Center,
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth(0.76f)
+                        .widthIn(max = 152.dp)
+                        .testTag("active_workout_actions"),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    CorrectionControlButton(
+                        label = "-1",
+                        onClick = onRemoveRep,
+                        size = 40.dp,
+                    )
+                    PrimaryActionButton(
+                        text = "End Set",
+                        onClick = onEndSet,
+                        modifier = Modifier
+                            .weight(1f)
+                            .testTag("end_set_button"),
+                        height = 34.dp,
+                    )
+                    CorrectionControlButton(
+                        label = "+1",
+                        onClick = onAddRep,
+                        size = 40.dp,
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+        }
+    }
+}
+
+@Composable
+private fun AdaptiveExerciseTitle(
+    text: String,
+    modifier: Modifier = Modifier,
+) {
+    val textMeasurer = rememberTextMeasurer()
+    val density = LocalDensity.current
+    val titleStyles = listOf(24.sp, 22.sp, 20.sp, 18.sp, 16.sp).map { size ->
+        MaterialTheme.typography.title1.copy(
+            fontSize = size,
+            fontWeight = FontWeight.Bold,
+        )
+    }
+
+    BoxWithConstraints(modifier = modifier) {
+        val maxWidthPx = with(density) { maxWidth.roundToPx() }
+        val titleStyle = remember(text, maxWidthPx, titleStyles, textMeasurer) {
+            titleStyles.firstOrNull { style ->
+                !textMeasurer.measure(
+                    text = AnnotatedString(text),
+                    style = style,
+                    maxLines = 1,
+                    overflow = TextOverflow.Clip,
+                    constraints = Constraints(maxWidth = maxWidthPx),
+                ).hasVisualOverflow
+            } ?: titleStyles.last()
+        }
+
+        Text(
+            text = text,
+            style = titleStyle,
+            modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center,
+            maxLines = 1,
+            softWrap = false,
+            overflow = TextOverflow.Ellipsis,
+        )
+    }
+}
+
+private fun RepDetectionState.toUserFacingStatus(): String {
+    return when (this) {
+        RepDetectionState.IDLE -> "Ready"
+        RepDetectionState.MOVING_UP,
+        RepDetectionState.MOVING_DOWN,
+        -> "Tracking"
+        RepDetectionState.REP_CONFIRMED -> "Rep detected"
+        RepDetectionState.PAUSED -> "Paused"
+    }
+}
