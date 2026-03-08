@@ -1,5 +1,9 @@
 package com.fitnessrepcounter.wear.presentation.screens.workout
 
+import android.app.Activity
+import android.content.Context
+import android.content.ContextWrapper
+import android.view.WindowManager
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -12,9 +16,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -30,26 +36,48 @@ import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import androidx.annotation.StringRes
 import com.fitnessrepcounter.wear.R
+import com.fitnessrepcounter.wear.domain.model.HapticMode
 import com.fitnessrepcounter.wear.domain.model.RepDetectionState
 import com.fitnessrepcounter.wear.presentation.components.BadgeTone
 import com.fitnessrepcounter.wear.presentation.components.CorrectionControlButton
 import com.fitnessrepcounter.wear.presentation.components.PrimaryActionButton
 import com.fitnessrepcounter.wear.presentation.components.StatusBadge
 import com.fitnessrepcounter.wear.presentation.components.WristRepScreenScaffold
+import com.fitnessrepcounter.wear.presentation.state.AmbientModeState
 import com.fitnessrepcounter.wear.presentation.state.WorkoutUiState
 import com.fitnessrepcounter.wear.ui.theme.WatchTextSecondary
 
 @Composable
 fun ActiveWorkoutScreen(
     uiState: WorkoutUiState,
+    ambientModeState: AmbientModeState = AmbientModeState(),
+    shouldKeepScreenOn: Boolean = false,
     onAddRep: () -> Unit,
     onRemoveRep: () -> Unit,
     onEndSet: () -> Unit,
 ) {
+    val view = LocalView.current
     val exercise = uiState.selectedExercise
-    val statusText = stringResource(uiState.detectionState.toUserFacingStatusRes())
+    val statusText = if (ambientModeState.isAmbient) {
+        stringResource(if (uiState.isTracking) R.string.status_tracking else R.string.status_ready)
+    } else {
+        stringResource(uiState.detectionState.toUserFacingStatusRes())
+    }
+
+    DisposableEffect(view, shouldKeepScreenOn) {
+        val window = view.context.findActivity()?.window
+        if (shouldKeepScreenOn) {
+            window?.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        } else {
+            window?.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
+        onDispose {
+            window?.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
+    }
 
     WristRepScreenScaffold(
+        ambientModeState = ambientModeState,
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
     ) {
@@ -83,43 +111,49 @@ fun ActiveWorkoutScreen(
             Spacer(modifier = Modifier.height(2.dp))
             StatusBadge(
                 label = statusText,
-                tone = if (uiState.detectionState == RepDetectionState.PAUSED) BadgeTone.MUTED else BadgeTone.ACCENT,
+                tone = if (ambientModeState.isAmbient || uiState.detectionState == RepDetectionState.PAUSED) {
+                    BadgeTone.MUTED
+                } else {
+                    BadgeTone.ACCENT
+                },
                 modifier = Modifier.testTag("active_workout_status"),
                 horizontalPadding = 9.dp,
                 verticalPadding = 2.dp,
             )
             Spacer(modifier = Modifier.weight(1f))
-            Box(
-                modifier = Modifier.fillMaxWidth(),
-                contentAlignment = Alignment.Center,
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth(0.76f)
-                        .widthIn(max = 152.dp)
-                        .testTag("active_workout_actions"),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
-                    verticalAlignment = Alignment.CenterVertically,
+            if (!ambientModeState.isAmbient) {
+                Box(
+                    modifier = Modifier.fillMaxWidth(),
+                    contentAlignment = Alignment.Center,
                 ) {
-                    CorrectionControlButton(
-                        label = stringResource(R.string.rep_adjust_minus_one),
-                        onClick = onRemoveRep,
-                        size = 40.dp,
-                    )
-                    PrimaryActionButton(
-                        text = stringResource(R.string.watch_cta_end_set),
-                        onClick = onEndSet,
+                    Row(
                         modifier = Modifier
-                            .weight(1f)
-                            .testTag("end_set_button"),
-                        height = 34.dp,
-                        maxLines = 2,
-                    )
-                    CorrectionControlButton(
-                        label = stringResource(R.string.rep_adjust_plus_one),
-                        onClick = onAddRep,
-                        size = 40.dp,
-                    )
+                            .fillMaxWidth(0.76f)
+                            .widthIn(max = 152.dp)
+                            .testTag("active_workout_actions"),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        CorrectionControlButton(
+                            label = stringResource(R.string.rep_adjust_minus_one),
+                            onClick = onRemoveRep,
+                            size = 40.dp,
+                        )
+                        PrimaryActionButton(
+                            text = stringResource(R.string.watch_cta_end_set),
+                            onClick = onEndSet,
+                            modifier = Modifier
+                                .weight(1f)
+                                .testTag("end_set_button"),
+                            height = 34.dp,
+                            maxLines = 2,
+                        )
+                        CorrectionControlButton(
+                            label = stringResource(R.string.rep_adjust_plus_one),
+                            onClick = onAddRep,
+                            size = 40.dp,
+                        )
+                    }
                 }
             }
             Spacer(modifier = Modifier.height(8.dp))
@@ -177,4 +211,26 @@ private fun RepDetectionState.toUserFacingStatusRes(): Int {
         RepDetectionState.REP_CONFIRMED -> R.string.status_rep_detected
         RepDetectionState.PAUSED -> R.string.status_paused
     }
+}
+
+internal fun shouldKeepScreenOnForEveryRep(
+    hapticMode: HapticMode,
+    workoutUiState: WorkoutUiState,
+    ambientModeState: AmbientModeState,
+): Boolean {
+    return hapticMode == HapticMode.EVERY_REP &&
+        workoutUiState.currentStep == com.fitnessrepcounter.wear.presentation.state.WorkoutStep.ACTIVE &&
+        workoutUiState.isTracking &&
+        !ambientModeState.isAmbient
+}
+
+private fun Context.findActivity(): Activity? {
+    var currentContext = this
+    while (currentContext is ContextWrapper) {
+        if (currentContext is Activity) {
+            return currentContext
+        }
+        currentContext = currentContext.baseContext
+    }
+    return null
 }

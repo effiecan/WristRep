@@ -9,19 +9,24 @@ import com.fitnessrepcounter.wear.R
 import com.fitnessrepcounter.wear.presentation.components.HeroMetric
 import com.fitnessrepcounter.wear.presentation.components.ScreenTitle
 import com.fitnessrepcounter.wear.presentation.components.WristRepScreenScaffold
+import com.fitnessrepcounter.wear.presentation.state.AmbientModeState
 import com.fitnessrepcounter.wear.presentation.state.WorkoutUiState
 
 @Composable
 fun ReadyScreen(
     uiState: WorkoutUiState,
+    ambientModeState: AmbientModeState = AmbientModeState(),
 ) {
-    val countdownText = if (uiState.countdownValue <= 0) {
+    val countdownText = if (ambientModeState.isAmbient) {
+        "--"
+    } else if (uiState.countdownValue <= 0) {
         stringResource(R.string.go)
     } else {
         uiState.countdownValue.toString()
     }
 
     WristRepScreenScaffold(
+        ambientModeState = ambientModeState,
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {

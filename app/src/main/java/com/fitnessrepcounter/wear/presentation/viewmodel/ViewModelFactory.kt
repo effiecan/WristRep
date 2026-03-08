@@ -14,16 +14,13 @@ class ViewModelFactory(
                 HomeViewModel(
                     workoutRepository = appContainer.workoutRepository,
                     entitlementRepository = appContainer.entitlementRepository,
+                    workoutRuntimeRepository = appContainer.workoutRuntimeRepository,
                 ) as T
             }
 
             modelClass.isAssignableFrom(WorkoutViewModel::class.java) -> {
                 WorkoutViewModel(
-                    workoutRepository = appContainer.workoutRepository,
-                    entitlementRepository = appContainer.entitlementRepository,
-                    motionRepository = appContainer.motionRepository,
-                    workoutSessionManager = appContainer.workoutSessionManager,
-                    hapticsManager = appContainer.hapticsManager,
+                    workoutRuntimeRepository = appContainer.workoutRuntimeRepository,
                 ) as T
             }
 
@@ -37,6 +34,13 @@ class ViewModelFactory(
                 PaywallViewModel(
                     entitlementRepository = appContainer.entitlementRepository,
                     hapticsManager = appContainer.hapticsManager,
+                ) as T
+            }
+
+            modelClass.isAssignableFrom(SettingsViewModel::class.java) -> {
+                SettingsViewModel(
+                    settingsRepository = appContainer.settingsRepository,
+                    entitlementRepository = appContainer.entitlementRepository,
                 ) as T
             }
 

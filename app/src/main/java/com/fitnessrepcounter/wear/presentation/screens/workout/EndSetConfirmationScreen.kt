@@ -15,17 +15,20 @@ import com.fitnessrepcounter.wear.presentation.components.PrimaryActionButton
 import com.fitnessrepcounter.wear.presentation.components.ScreenTitle
 import com.fitnessrepcounter.wear.presentation.components.SecondaryActionButton
 import com.fitnessrepcounter.wear.presentation.components.WristRepScreenScaffold
+import com.fitnessrepcounter.wear.presentation.state.AmbientModeState
 import com.fitnessrepcounter.wear.presentation.state.WorkoutUiState
 
 @Composable
 fun EndSetConfirmationScreen(
     uiState: WorkoutUiState,
+    ambientModeState: AmbientModeState = AmbientModeState(),
     onRestClick: () -> Unit,
     onFinishWorkout: () -> Unit,
 ) {
     val set = uiState.latestCompletedSet
 
     WristRepScreenScaffold(
+        ambientModeState = ambientModeState,
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
     ) {
@@ -36,20 +39,22 @@ fun EndSetConfirmationScreen(
             label = stringResource(R.string.reps_logged),
         )
         Spacer(modifier = Modifier.weight(1f))
-        PrimaryActionButton(
-            text = stringResource(R.string.watch_cta_rest),
-            onClick = onRestClick,
-            modifier = Modifier.fillMaxWidth(0.72f),
-            height = 36.dp,
-            maxLines = 2,
-        )
-        Spacer(modifier = Modifier.height(8.dp))
-        SecondaryActionButton(
-            text = stringResource(R.string.watch_cta_finish_workout),
-            onClick = onFinishWorkout,
-            modifier = Modifier.fillMaxWidth(0.68f),
-            height = 34.dp,
-            maxLines = 2,
-        )
+        if (!ambientModeState.isAmbient) {
+            PrimaryActionButton(
+                text = stringResource(R.string.watch_cta_rest),
+                onClick = onRestClick,
+                modifier = Modifier.fillMaxWidth(0.72f),
+                height = 36.dp,
+                maxLines = 2,
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            SecondaryActionButton(
+                text = stringResource(R.string.watch_cta_finish_workout),
+                onClick = onFinishWorkout,
+                modifier = Modifier.fillMaxWidth(0.68f),
+                height = 34.dp,
+                maxLines = 2,
+            )
+        }
     }
 }

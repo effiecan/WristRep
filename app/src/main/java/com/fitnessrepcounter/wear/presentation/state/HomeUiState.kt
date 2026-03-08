@@ -6,4 +6,5 @@ import com.fitnessrepcounter.wear.domain.model.WorkoutSession
 data class HomeUiState(
     val entitlementState: EntitlementState = EntitlementState(),
     val recentWorkouts: List<WorkoutSession> = emptyList(),
+    val hasActiveWorkout: Boolean = false,
 )

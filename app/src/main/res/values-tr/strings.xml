@@ -1,10 +1,17 @@
 <resources>
     <string name="app_name">WristRep</string>
-    <string name="pro_unlocked">Pro açıldı</string>
+    <string name="pro_unlocked">Pro aktif</string>
     <string name="free_workouts_left">%1$d ücretsiz hak kaldı</string>
     <string name="trial_used">Deneme kullanıldı</string>
     <string name="start_workout">Antrenmanı başlat</string>
+    <string name="resume_workout">Antrenmana dön</string>
     <string name="history">Geçmiş</string>
+    <string name="settings">Ayarlar</string>
+    <string name="haptics">Titreşim</string>
+    <string name="language">Dil</string>
+    <string name="language_system_default">Sistem varsayılanı</string>
+    <string name="go_premium">Premiuma geç</string>
+    <string name="manage_premium">Premium</string>
     <string name="exercises">Egzersizler</string>
     <string name="back">Geri</string>
     <string name="go">Başla</string>
@@ -39,6 +46,7 @@
     <string name="no_workouts_yet">Henüz antrenman yok</string>
     <string name="completed_sessions_will_appear_here">Tamamlanan antrenmanlar burada görünecek.</string>
     <string name="unlock_pro">Pro kilidini aç</string>
+    <string name="premium">Premium</string>
     <string name="pay_once">Tek sefer öde</string>
     <string name="unlimited_workouts">Sınırsız antrenman</string>
     <string name="keep_history">Geçmişi sakla</string>
@@ -59,4 +67,13 @@
     <string name="exercise_triceps_extension">Triceps Extension</string>
     <string name="exercise_dumbbell_row">Dumbbell Row</string>
     <string name="exercise_dumbbell_chest_press">Dumbbell Chest Press</string>
+    <string name="haptics_off">Kapalı</string>
+    <string name="haptics_important_only">Sadece önemli</string>
+    <string name="haptics_every_rep">Her tekrar</string>
+    <string name="haptics_keep_screen_awake_description">Daha tutarlı geri bildirim için antrenman sırasında ekran açık tutulur. Daha fazla pil tüketir.</string>
+    <string name="workout_notification_channel_name">Antrenman takibi</string>
+    <string name="workout_notification_channel_description">Süren antrenman takibi ve geri dönüş girişi.</string>
+    <string name="workout_status_ready_countdown">%1$d sn sonra başlıyor</string>
+    <string name="workout_status_active_reps">%1$d tekrar sayıldı</string>
+    <string name="workout_status_rest">Dinlenme %1$ds</string>
 </resources>

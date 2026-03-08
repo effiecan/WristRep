@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,6 +16,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
@@ -32,14 +34,20 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.wear.compose.foundation.lazy.ScalingLazyColumn
+import androidx.wear.compose.foundation.lazy.ScalingLazyListScope
+import androidx.wear.compose.foundation.lazy.ScalingLazyListState
+import androidx.wear.compose.foundation.lazy.rememberScalingLazyListState
 import androidx.wear.compose.material.Button
 import androidx.wear.compose.material.ButtonDefaults
 import androidx.wear.compose.material.MaterialTheme
+import androidx.wear.compose.material.PositionIndicator
 import androidx.wear.compose.material.Scaffold
 import androidx.wear.compose.material.Text
 import androidx.wear.compose.material.TimeText
 import androidx.compose.runtime.remember
 import androidx.compose.ui.text.rememberTextMeasurer
+import com.fitnessrepcounter.wear.presentation.state.AmbientModeState
 import com.fitnessrepcounter.wear.ui.theme.WatchAccentSoft
 import com.fitnessrepcounter.wear.ui.theme.WatchBadgeMuted
 import com.fitnessrepcounter.wear.ui.theme.WatchBlack
@@ -58,18 +66,53 @@ enum class BadgeTone {
 @Composable
 fun WristRepScreenScaffold(
     modifier: Modifier = Modifier,
+    ambientModeState: AmbientModeState = AmbientModeState(),
     horizontalAlignment: Alignment.Horizontal = Alignment.CenterHorizontally,
     verticalArrangement: Arrangement.Vertical = Arrangement.Top,
     content: @Composable ColumnScope.() -> Unit,
 ) {
+    val ambientShift = when {
+        !ambientModeState.isAmbient || !ambientModeState.burnInProtectionRequired -> 0.dp
+        ambientModeState.ambientUpdateCount % 2 == 0 -> 2.dp
+        else -> (-2).dp
+    }
+
     Scaffold(timeText = { TimeText() }) {
         Column(
             modifier = modifier
                 .fillMaxSize()
                 .background(MaterialTheme.colors.background)
+                .offset(x = ambientShift, y = ambientShift)
                 .padding(horizontal = 12.dp, vertical = 14.dp),
             horizontalAlignment = horizontalAlignment,
             verticalArrangement = verticalArrangement,
+            content = content,
+        )
+    }
+}
+
+@Composable
+fun WearListScreenScaffold(
+    modifier: Modifier = Modifier,
+    state: ScalingLazyListState = rememberScalingLazyListState(),
+    contentPadding: PaddingValues = PaddingValues(
+        start = 12.dp,
+        top = 18.dp,
+        end = 12.dp,
+        bottom = 56.dp,
+    ),
+    content: ScalingLazyListScope.() -> Unit,
+) {
+    Scaffold(
+        timeText = { TimeText() },
+        positionIndicator = { PositionIndicator(scalingLazyListState = state) },
+    ) {
+        ScalingLazyColumn(
+            modifier = modifier
+                .fillMaxSize()
+                .background(MaterialTheme.colors.background),
+            state = state,
+            contentPadding = contentPadding,
             content = content,
         )
     }
@@ -138,6 +181,58 @@ fun SecondaryActionButton(
         ),
     ) {
         AdaptiveButtonLabel(text = text, fontWeight = FontWeight.Medium, maxLines = maxLines)
+    }
+}
+
+@Composable
+fun CompactUtilityChip(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier.fillMaxWidth(),
+    enabled: Boolean = true,
+    height: Dp = 28.dp,
+) {
+    Button(
+        onClick = onClick,
+        modifier = modifier.height(height),
+        enabled = enabled,
+        colors = ButtonDefaults.buttonColors(
+            backgroundColor = MaterialTheme.colors.surface,
+            contentColor = WatchTextSecondary,
+            disabledBackgroundColor = MaterialTheme.colors.surface,
+            disabledContentColor = WatchTextSecondary.copy(alpha = 0.45f),
+        ),
+    ) {
+        AdaptiveButtonLabel(text = text, fontWeight = FontWeight.Medium, maxLines = 1)
+    }
+}
+
+@Composable
+fun ListActionChip(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier.fillMaxWidth(),
+    enabled: Boolean = true,
+    selected: Boolean = false,
+    height: Dp = 34.dp,
+    maxLines: Int = 2,
+) {
+    Button(
+        onClick = onClick,
+        modifier = modifier.height(height),
+        enabled = enabled,
+        colors = ButtonDefaults.buttonColors(
+            backgroundColor = if (selected) WatchAccentSoft else WatchSurfaceSecondary,
+            contentColor = if (selected) MaterialTheme.colors.primary else MaterialTheme.colors.onSurface,
+            disabledBackgroundColor = MaterialTheme.colors.surface,
+            disabledContentColor = MaterialTheme.colors.onSurface.copy(alpha = 0.45f),
+        ),
+    ) {
+        AdaptiveButtonLabel(
+            text = text,
+            fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Medium,
+            maxLines = maxLines,
+        )
     }
 }
 

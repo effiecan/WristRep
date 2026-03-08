@@ -57,4 +57,21 @@
     <string name="exercise_triceps_extension">Tricepsextension</string>
     <string name="exercise_dumbbell_row">Hantelrodd</string>
     <string name="exercise_dumbbell_chest_press">Hantelpress för bröst</string>
+    <string name="resume_workout">Resume workout</string>
+    <string name="settings">Settings</string>
+    <string name="haptics">Haptics</string>
+    <string name="language">Language</string>
+    <string name="language_system_default">System default</string>
+    <string name="go_premium">Go Premium</string>
+    <string name="manage_premium">Premium</string>
+    <string name="premium">Premium</string>
+    <string name="haptics_off">Off</string>
+    <string name="haptics_important_only">Important only</string>
+    <string name="haptics_every_rep">Every rep</string>
+    <string name="haptics_keep_screen_awake_description">Skärmen hålls tänd under träningspasset för jämnare återkoppling. Drar mer batteri.</string>
+    <string name="workout_notification_channel_name">Workout tracking</string>
+    <string name="workout_notification_channel_description">Ongoing workout tracking and resume entry.</string>
+    <string name="workout_status_ready_countdown">Starting in %1$d</string>
+    <string name="workout_status_active_reps">%1$d reps tracked</string>
+    <string name="workout_status_rest">Rest %1$ds left</string>
 </resources>

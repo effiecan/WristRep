@@ -19,17 +19,20 @@ import com.fitnessrepcounter.wear.presentation.components.ScreenTitle
 import com.fitnessrepcounter.wear.presentation.components.SecondaryActionButton
 import com.fitnessrepcounter.wear.presentation.components.SummaryCard
 import com.fitnessrepcounter.wear.presentation.components.WristRepScreenScaffold
+import com.fitnessrepcounter.wear.presentation.state.AmbientModeState
 import com.fitnessrepcounter.wear.presentation.state.WorkoutUiState
 
 @Composable
 fun WorkoutSummaryScreen(
     uiState: WorkoutUiState,
+    ambientModeState: AmbientModeState = AmbientModeState(),
     onSave: () -> Unit,
     onDiscard: () -> Unit,
 ) {
     val scrollState = rememberScrollState()
 
     WristRepScreenScaffold(
+        ambientModeState = ambientModeState,
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
     ) {
@@ -42,37 +45,43 @@ fun WorkoutSummaryScreen(
             value = "${uiState.totalReps} ${stringResource(R.string.reps)}",
         )
         Spacer(modifier = Modifier.height(12.dp))
-        Column(
-            modifier = Modifier
-                .weight(1f)
-                .fillMaxWidth()
-                .verticalScroll(scrollState),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
-        ) {
-            uiState.completedSets.forEach { set ->
-                HistoryRowCard(
-                    title = stringResource(R.string.set_number, set.setNumber),
-                    subtitle = stringResource(R.string.manual_edits_count, set.manualAdjustmentCount),
-                    value = "${set.repCount}",
-                )
+        if (!ambientModeState.isAmbient) {
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .verticalScroll(scrollState),
+                verticalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                uiState.completedSets.forEach { set ->
+                    HistoryRowCard(
+                        title = stringResource(R.string.set_number, set.setNumber),
+                        subtitle = stringResource(R.string.manual_edits_count, set.manualAdjustmentCount),
+                        value = "${set.repCount}",
+                    )
+                }
             }
+        } else {
+            Spacer(modifier = Modifier.weight(1f))
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        PrimaryActionButton(
-            text = stringResource(R.string.watch_cta_save),
-            onClick = onSave,
-            enabled = uiState.canSave,
-            modifier = Modifier.fillMaxWidth(0.7f),
-            height = 36.dp,
-            maxLines = 2,
-        )
-        Spacer(modifier = Modifier.height(8.dp))
-        SecondaryActionButton(
-            text = stringResource(R.string.watch_cta_discard),
-            onClick = onDiscard,
-            modifier = Modifier.fillMaxWidth(0.68f),
-            height = 34.dp,
-            maxLines = 2,
-        )
+        if (!ambientModeState.isAmbient) {
+            Spacer(modifier = Modifier.height(10.dp))
+            PrimaryActionButton(
+                text = stringResource(R.string.watch_cta_save),
+                onClick = onSave,
+                enabled = uiState.canSave,
+                modifier = Modifier.fillMaxWidth(0.7f),
+                height = 36.dp,
+                maxLines = 2,
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            SecondaryActionButton(
+                text = stringResource(R.string.watch_cta_discard),
+                onClick = onDiscard,
+                modifier = Modifier.fillMaxWidth(0.68f),
+                height = 34.dp,
+                maxLines = 2,
+            )
+        }
     }
 }

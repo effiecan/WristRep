@@ -14,29 +14,34 @@ import com.fitnessrepcounter.wear.presentation.components.HeroMetric
 import com.fitnessrepcounter.wear.presentation.components.ScreenTitle
 import com.fitnessrepcounter.wear.presentation.components.SecondaryActionButton
 import com.fitnessrepcounter.wear.presentation.components.WristRepScreenScaffold
+import com.fitnessrepcounter.wear.presentation.state.AmbientModeState
 import com.fitnessrepcounter.wear.presentation.state.WorkoutUiState
 
 @Composable
 fun RestTimerScreen(
     uiState: WorkoutUiState,
+    ambientModeState: AmbientModeState = AmbientModeState(),
     onSkip: () -> Unit,
 ) {
     WristRepScreenScaffold(
+        ambientModeState = ambientModeState,
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
     ) {
         ScreenTitle(title = stringResource(R.string.rest))
         Spacer(modifier = Modifier.weight(1f))
         HeroMetric(
-            value = uiState.restSecondsRemaining.toString(),
+            value = if (ambientModeState.isAmbient) "--" else uiState.restSecondsRemaining.toString(),
             label = stringResource(R.string.seconds_left),
         )
         Spacer(modifier = Modifier.weight(1f))
-        SecondaryActionButton(
-            text = stringResource(R.string.skip),
-            onClick = onSkip,
-            modifier = Modifier.fillMaxWidth(0.54f),
-            height = 34.dp,
-        )
+        if (!ambientModeState.isAmbient) {
+            SecondaryActionButton(
+                text = stringResource(R.string.skip),
+                onClick = onSkip,
+                modifier = Modifier.fillMaxWidth(0.54f),
+                height = 34.dp,
+            )
+        }
     }
 }
