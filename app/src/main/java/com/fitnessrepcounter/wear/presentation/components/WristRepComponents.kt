@@ -1,5 +1,9 @@
 package com.fitnessrepcounter.wear.presentation.components
 
+import android.app.Activity
+import android.content.Context
+import android.content.ContextWrapper
+import android.view.WindowManager
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -20,12 +24,14 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -61,6 +67,25 @@ enum class BadgeTone {
     ACCENT,
     WARM,
     MUTED,
+}
+
+@Composable
+fun WorkoutKeepScreenOnEffect(
+    enabled: Boolean,
+) {
+    val view = LocalView.current
+
+    DisposableEffect(view, enabled) {
+        val window = view.context.findActivity()?.window
+        if (enabled) {
+            window?.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        } else {
+            window?.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
+        onDispose {
+            window?.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
+    }
 }
 
 @Composable
@@ -509,4 +534,15 @@ fun ScrollFadeHint(
                 ),
             ),
     )
+}
+
+private fun Context.findActivity(): Activity? {
+    var currentContext = this
+    while (currentContext is ContextWrapper) {
+        if (currentContext is Activity) {
+            return currentContext
+        }
+        currentContext = currentContext.baseContext
+    }
+    return null
 }

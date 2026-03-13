@@ -129,6 +129,58 @@ class WorkoutRuntimeRepositoryImplTest {
     }
 
     @Test
+    fun startReadyCountdown_doesNotRestartWhenWorkoutIsAlreadyActive() = runTest {
+        val repository = WorkoutRuntimeRepositoryImpl(
+            workoutRepository = FakeWorkoutRepository(),
+            entitlementRepository = FakeEntitlementRepository(),
+            motionRepository = FakeMotionRepository(),
+            settingsRepository = FakeSettingsRepository(),
+            workoutSessionManager = WorkoutSessionManager(),
+            workoutServiceController = FakeWorkoutServiceController(),
+            repositoryScope = backgroundScope,
+        )
+
+        repository.prepareNewWorkout()
+        repository.selectExercise(Exercise.BICEPS_CURL)
+        repository.startReadyCountdown()
+        advanceTimeBy(3_100L)
+        advanceUntilIdle()
+
+        repository.startReadyCountdown()
+        advanceTimeBy(1_100L)
+        advanceUntilIdle()
+
+        assertThat(repository.uiState.value.currentStep).isEqualTo(com.fitnessrepcounter.wear.presentation.state.WorkoutStep.ACTIVE)
+        assertThat(repository.uiState.value.countdownValue).isEqualTo(0)
+    }
+
+    @Test
+    fun beginRestTimer_doesNotRestartWhenWorkoutIsAlreadyActive() = runTest {
+        val repository = WorkoutRuntimeRepositoryImpl(
+            workoutRepository = FakeWorkoutRepository(),
+            entitlementRepository = FakeEntitlementRepository(),
+            motionRepository = FakeMotionRepository(),
+            settingsRepository = FakeSettingsRepository(),
+            workoutSessionManager = WorkoutSessionManager(),
+            workoutServiceController = FakeWorkoutServiceController(),
+            repositoryScope = backgroundScope,
+        )
+
+        repository.prepareNewWorkout()
+        repository.selectExercise(Exercise.BICEPS_CURL)
+        repository.addManualRep()
+        repository.endCurrentSet()
+        repository.beginRestTimer()
+        advanceTimeBy(60_100L)
+        advanceUntilIdle()
+
+        repository.beginRestTimer()
+        advanceUntilIdle()
+
+        assertThat(repository.uiState.value.currentStep).isEqualTo(com.fitnessrepcounter.wear.presentation.state.WorkoutStep.ACTIVE)
+    }
+
+    @Test
     fun saveWorkout_persistsWorkout_andConsumesFreeUse() = runTest {
         val workoutRepository = FakeWorkoutRepository()
         val entitlementRepository = FakeEntitlementRepository()

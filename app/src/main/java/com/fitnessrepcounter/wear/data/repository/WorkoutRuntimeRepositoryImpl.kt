@@ -147,7 +147,13 @@ class WorkoutRuntimeRepositoryImpl(
     }
 
     override fun startReadyCountdown() {
-        if (_uiState.value.selectedExercise == null || countdownJob?.isActive == true) return
+        if (
+            _uiState.value.selectedExercise == null ||
+            countdownJob?.isActive == true ||
+            _uiState.value.currentStep != WorkoutStep.READY
+        ) {
+            return
+        }
 
         ensureForegroundServiceStarted()
 
@@ -200,7 +206,12 @@ class WorkoutRuntimeRepositoryImpl(
     }
 
     override fun beginRestTimer() {
-        if (restTimerJob?.isActive == true) return
+        if (
+            restTimerJob?.isActive == true ||
+            _uiState.value.currentStep !in setOf(WorkoutStep.END_SET_CONFIRMATION, WorkoutStep.REST_TIMER)
+        ) {
+            return
+        }
 
         ensureForegroundServiceStarted()
         workoutSessionManager.startNextSet()

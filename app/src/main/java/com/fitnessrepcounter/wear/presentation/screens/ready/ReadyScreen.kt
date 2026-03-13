@@ -8,6 +8,7 @@ import androidx.compose.ui.res.stringResource
 import com.fitnessrepcounter.wear.R
 import com.fitnessrepcounter.wear.presentation.components.HeroMetric
 import com.fitnessrepcounter.wear.presentation.components.ScreenTitle
+import com.fitnessrepcounter.wear.presentation.components.WorkoutKeepScreenOnEffect
 import com.fitnessrepcounter.wear.presentation.components.WristRepScreenScaffold
 import com.fitnessrepcounter.wear.presentation.state.AmbientModeState
 import com.fitnessrepcounter.wear.presentation.state.WorkoutUiState
@@ -16,6 +17,7 @@ import com.fitnessrepcounter.wear.presentation.state.WorkoutUiState
 fun ReadyScreen(
     uiState: WorkoutUiState,
     ambientModeState: AmbientModeState = AmbientModeState(),
+    shouldKeepScreenOn: Boolean = false,
 ) {
     val countdownText = if (ambientModeState.isAmbient) {
         "--"
@@ -24,6 +26,8 @@ fun ReadyScreen(
     } else {
         uiState.countdownValue.toString()
     }
+
+    WorkoutKeepScreenOnEffect(enabled = shouldKeepScreenOn)
 
     WristRepScreenScaffold(
         ambientModeState = ambientModeState,

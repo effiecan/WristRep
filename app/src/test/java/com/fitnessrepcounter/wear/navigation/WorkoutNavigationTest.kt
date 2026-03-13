@@ -42,4 +42,48 @@ class WorkoutNavigationTest {
         assertThat(isProtectedWorkoutRoute(AppRoute.ExerciseSelection.route)).isFalse()
         assertThat(isProtectedWorkoutRoute(null)).isFalse()
     }
+
+    @Test
+    fun workoutRouteSyncTarget_returnsActiveRouteWhenCurrentRouteIsStaleReady() {
+        assertThat(
+            workoutRouteSyncTarget(
+                hasActiveSession = true,
+                step = WorkoutStep.ACTIVE,
+                currentRoute = AppRoute.Ready.route,
+            ),
+        ).isEqualTo(AppRoute.ActiveWorkout.route)
+    }
+
+    @Test
+    fun workoutRouteSyncTarget_returnsActiveRouteWhenCurrentRouteIsStaleRestTimer() {
+        assertThat(
+            workoutRouteSyncTarget(
+                hasActiveSession = true,
+                step = WorkoutStep.ACTIVE,
+                currentRoute = AppRoute.RestTimer.route,
+            ),
+        ).isEqualTo(AppRoute.ActiveWorkout.route)
+    }
+
+    @Test
+    fun workoutRouteSyncTarget_returnsNullWhenThereIsNoActiveSession() {
+        assertThat(
+            workoutRouteSyncTarget(
+                hasActiveSession = false,
+                step = WorkoutStep.ACTIVE,
+                currentRoute = AppRoute.Ready.route,
+            ),
+        ).isNull()
+    }
+
+    @Test
+    fun workoutRouteSyncTarget_returnsNullWhenAlreadyOnTargetRoute() {
+        assertThat(
+            workoutRouteSyncTarget(
+                hasActiveSession = true,
+                step = WorkoutStep.ACTIVE,
+                currentRoute = AppRoute.ActiveWorkout.route,
+            ),
+        ).isNull()
+    }
 }

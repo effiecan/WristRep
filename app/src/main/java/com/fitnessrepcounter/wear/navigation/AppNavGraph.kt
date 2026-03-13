@@ -29,9 +29,8 @@ import com.fitnessrepcounter.wear.presentation.screens.summary.WorkoutSummaryScr
 import com.fitnessrepcounter.wear.presentation.screens.workout.ActiveWorkoutScreen
 import com.fitnessrepcounter.wear.presentation.screens.workout.EndSetConfirmationScreen
 import com.fitnessrepcounter.wear.presentation.screens.workout.RestTimerScreen
-import com.fitnessrepcounter.wear.presentation.screens.workout.shouldKeepScreenOnForEveryRep
+import com.fitnessrepcounter.wear.presentation.screens.workout.shouldKeepScreenOnDuringWorkout
 import com.fitnessrepcounter.wear.presentation.state.AmbientModeState
-import com.fitnessrepcounter.wear.presentation.state.WorkoutStep
 import com.fitnessrepcounter.wear.presentation.viewmodel.HistoryViewModel
 import com.fitnessrepcounter.wear.presentation.viewmodel.HomeViewModel
 import com.fitnessrepcounter.wear.presentation.viewmodel.PaywallViewModel
@@ -48,6 +47,10 @@ fun AppNavGraph(
     ambientModeState: StateFlow<AmbientModeState>,
 ) {
     val navController = rememberSwipeDismissableNavController()
+    val workoutViewModel: WorkoutViewModel = viewModel(factory = viewModelFactory)
+    val workoutUiState by workoutViewModel.uiState.collectAsState()
+    val settingsViewModel: SettingsViewModel = viewModel(factory = viewModelFactory)
+    val settingsUiState by settingsViewModel.uiState.collectAsState()
     val resumeRequestCount by resumeWorkoutRequests.collectAsState()
     val hasActiveWorkout by workoutRuntimeRepository.hasActiveSession.collectAsState()
     val ambientState by ambientModeState.collectAsState()
@@ -60,7 +63,20 @@ fun AppNavGraph(
         if (resumeRequestCount == 0 || !hasActiveWorkout) return@LaunchedEffect
         navController.resumeWorkoutRoute(
             currentRoute = currentRoute,
-            targetRoute = workoutRouteForStep(workoutRuntimeRepository.currentStep()),
+            targetRoute = workoutRouteForStep(workoutUiState.currentStep),
+        )
+    }
+
+    LaunchedEffect(hasActiveWorkout, workoutUiState.currentStep, currentRoute) {
+        val targetRoute = workoutRouteSyncTarget(
+            hasActiveSession = hasActiveWorkout,
+            step = workoutUiState.currentStep,
+            currentRoute = currentRoute,
+        ) ?: return@LaunchedEffect
+
+        navController.resumeWorkoutRoute(
+            currentRoute = currentRoute,
+            targetRoute = targetRoute,
         )
     }
 
@@ -182,9 +198,6 @@ fun AppNavGraph(
             startDestination = AppRoute.ExerciseSelection.route,
         ) {
             composable(AppRoute.ExerciseSelection.route) {
-                val workoutViewModel: WorkoutViewModel = viewModel(factory = viewModelFactory)
-                val uiState by workoutViewModel.uiState.collectAsState()
-
                 LaunchedEffect(hasActiveWorkout) {
                     if (!hasActiveWorkout) {
                         workoutViewModel.prepareNewWorkout()
@@ -192,7 +205,7 @@ fun AppNavGraph(
                 }
 
                 ExerciseSelectionScreen(
-                    uiState = uiState,
+                    uiState = workoutUiState,
                     onSelectExercise = { exercise ->
                         workoutViewModel.selectExercise(exercise)
                         navController.navigate(AppRoute.Ready.route) {
@@ -208,40 +221,28 @@ fun AppNavGraph(
             }
 
             composable(AppRoute.Ready.route) {
-                val workoutViewModel: WorkoutViewModel = viewModel(factory = viewModelFactory)
-                val uiState by workoutViewModel.uiState.collectAsState()
-
                 LaunchedEffect(Unit) {
                     workoutViewModel.startReadyCountdown()
                 }
 
-                LaunchedEffect(uiState.currentStep) {
-                    if (uiState.currentStep == WorkoutStep.ACTIVE) {
-                        navController.navigate(AppRoute.ActiveWorkout.route) {
-                            popUpTo(AppRoute.Ready.route) { inclusive = true }
-                            launchSingleTop = true
-                        }
-                    }
-                }
-
                 ReadyScreen(
-                    uiState = uiState,
+                    uiState = workoutUiState,
                     ambientModeState = ambientState,
+                    shouldKeepScreenOn = shouldKeepScreenOnDuringWorkout(
+                        hapticMode = settingsUiState.hapticMode,
+                        workoutUiState = workoutUiState,
+                        ambientModeState = ambientState,
+                    ),
                 )
             }
 
             composable(AppRoute.ActiveWorkout.route) {
-                val workoutViewModel: WorkoutViewModel = viewModel(factory = viewModelFactory)
-                val uiState by workoutViewModel.uiState.collectAsState()
-                val settingsViewModel: SettingsViewModel = viewModel(factory = viewModelFactory)
-                val settingsUiState by settingsViewModel.uiState.collectAsState()
-
                 ActiveWorkoutScreen(
-                    uiState = uiState,
+                    uiState = workoutUiState,
                     ambientModeState = ambientState,
-                    shouldKeepScreenOn = shouldKeepScreenOnForEveryRep(
+                    shouldKeepScreenOn = shouldKeepScreenOnDuringWorkout(
                         hapticMode = settingsUiState.hapticMode,
-                        workoutUiState = uiState,
+                        workoutUiState = workoutUiState,
                         ambientModeState = ambientState,
                     ),
                     onAddRep = workoutViewModel::addManualRep,
@@ -257,11 +258,8 @@ fun AppNavGraph(
             }
 
             composable(AppRoute.EndSetConfirmation.route) {
-                val workoutViewModel: WorkoutViewModel = viewModel(factory = viewModelFactory)
-                val uiState by workoutViewModel.uiState.collectAsState()
-
                 EndSetConfirmationScreen(
-                    uiState = uiState,
+                    uiState = workoutUiState,
                     ambientModeState = ambientState,
                     onRestClick = {
                         navController.navigate(AppRoute.RestTimer.route) {
@@ -279,36 +277,22 @@ fun AppNavGraph(
             }
 
             composable(AppRoute.RestTimer.route) {
-                val workoutViewModel: WorkoutViewModel = viewModel(factory = viewModelFactory)
-                val uiState by workoutViewModel.uiState.collectAsState()
-
                 LaunchedEffect(Unit) {
                     workoutViewModel.beginRestTimer()
                 }
 
-                LaunchedEffect(uiState.currentStep) {
-                    if (uiState.currentStep == WorkoutStep.ACTIVE) {
-                        navController.navigate(AppRoute.ActiveWorkout.route) {
-                            popUpTo(AppRoute.RestTimer.route) { inclusive = true }
-                            launchSingleTop = true
-                        }
-                    }
-                }
-
                 RestTimerScreen(
-                    uiState = uiState,
+                    uiState = workoutUiState,
                     ambientModeState = ambientState,
                     onSkip = workoutViewModel::skipRestTimer,
                 )
             }
 
             composable(AppRoute.WorkoutSummary.route) {
-                val workoutViewModel: WorkoutViewModel = viewModel(factory = viewModelFactory)
-                val uiState by workoutViewModel.uiState.collectAsState()
                 val coroutineScope = rememberCoroutineScope()
 
                 WorkoutSummaryScreen(
-                    uiState = uiState,
+                    uiState = workoutUiState,
                     ambientModeState = ambientState,
                     onSave = {
                         coroutineScope.launch {

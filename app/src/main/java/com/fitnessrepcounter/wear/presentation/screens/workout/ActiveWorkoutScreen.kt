@@ -1,9 +1,4 @@
 package com.fitnessrepcounter.wear.presentation.screens.workout
-
-import android.app.Activity
-import android.content.Context
-import android.content.ContextWrapper
-import android.view.WindowManager
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -16,11 +11,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -36,12 +29,12 @@ import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import androidx.annotation.StringRes
 import com.fitnessrepcounter.wear.R
-import com.fitnessrepcounter.wear.domain.model.HapticMode
 import com.fitnessrepcounter.wear.domain.model.RepDetectionState
 import com.fitnessrepcounter.wear.presentation.components.BadgeTone
 import com.fitnessrepcounter.wear.presentation.components.CorrectionControlButton
 import com.fitnessrepcounter.wear.presentation.components.PrimaryActionButton
 import com.fitnessrepcounter.wear.presentation.components.StatusBadge
+import com.fitnessrepcounter.wear.presentation.components.WorkoutKeepScreenOnEffect
 import com.fitnessrepcounter.wear.presentation.components.WristRepScreenScaffold
 import com.fitnessrepcounter.wear.presentation.state.AmbientModeState
 import com.fitnessrepcounter.wear.presentation.state.WorkoutUiState
@@ -56,7 +49,6 @@ fun ActiveWorkoutScreen(
     onRemoveRep: () -> Unit,
     onEndSet: () -> Unit,
 ) {
-    val view = LocalView.current
     val exercise = uiState.selectedExercise
     val statusText = if (ambientModeState.isAmbient) {
         stringResource(if (uiState.isTracking) R.string.status_tracking else R.string.status_ready)
@@ -64,17 +56,7 @@ fun ActiveWorkoutScreen(
         stringResource(uiState.detectionState.toUserFacingStatusRes())
     }
 
-    DisposableEffect(view, shouldKeepScreenOn) {
-        val window = view.context.findActivity()?.window
-        if (shouldKeepScreenOn) {
-            window?.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        } else {
-            window?.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        }
-        onDispose {
-            window?.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        }
-    }
+    WorkoutKeepScreenOnEffect(enabled = shouldKeepScreenOn)
 
     WristRepScreenScaffold(
         ambientModeState = ambientModeState,
@@ -211,26 +193,4 @@ private fun RepDetectionState.toUserFacingStatusRes(): Int {
         RepDetectionState.REP_CONFIRMED -> R.string.status_rep_detected
         RepDetectionState.PAUSED -> R.string.status_paused
     }
-}
-
-internal fun shouldKeepScreenOnForEveryRep(
-    hapticMode: HapticMode,
-    workoutUiState: WorkoutUiState,
-    ambientModeState: AmbientModeState,
-): Boolean {
-    return hapticMode == HapticMode.EVERY_REP &&
-        workoutUiState.currentStep == com.fitnessrepcounter.wear.presentation.state.WorkoutStep.ACTIVE &&
-        workoutUiState.isTracking &&
-        !ambientModeState.isAmbient
-}
-
-private fun Context.findActivity(): Activity? {
-    var currentContext = this
-    while (currentContext is ContextWrapper) {
-        if (currentContext is Activity) {
-            return currentContext
-        }
-        currentContext = currentContext.baseContext
-    }
-    return null
 }
